@@ -1,0 +1,47 @@
+$blue: #00ffff;
+$roxo: #800080;
+$amarelo: #ffff00;
+* {
+    background: black;
+}
+.btn {
+    width: 85px;
+    display: block;
+    padding: 10px 0px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    background-color: black;
+    &.btn-roxo {
+        color: $roxo;
+        transition: 0.5s;
+        border: 2px solid $roxo;
+        box-shadow: 0px 5px 5px $roxo;
+        &:hover {
+            transition: 0.5s;
+            transform: translateY(5px);
+            box-shadow: 0px 0px 0px $roxo;
+        }
+    }
+    &.btn-amarelo {
+        color: $amarelo;
+        transition: 0.5s;
+        border: 2px solid $amarelo;
+        box-shadow: 0px 5px 5px $amarelo;
+        &:hover {
+            transition: 0.5s;
+            transform: translateY(5px);
+            box-shadow: 0px 0px 0px $amarelo;
+        }
+    }
+    &.btn-azul {
+        color: $blue;
+        transition: 0.5s;
+        border: 2px solid $blue;
+        box-shadow: 0px 5px 5px $blue;
+        &:hover {
+            transition: 0.5s;
+            transform: translateY(5px);
+            box-shadow: 0px 0px 0px $blue;
+        }
+    }
+}

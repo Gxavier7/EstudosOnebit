@@ -1,0 +1,30 @@
+@import "./others/colors.scss";
+@import "./others/page.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(../images/backgroundLp.png);
+    background-size: cover;
+    background-attachment: fixed;
+    color: $text-color;
+    .container {
+        background-color: $bg-color;
+        max-width: 450px;
+        .logo {
+            max-width: 17rem;
+        }
+        .btn {
+            cursor: pointer;
+            color: $button-color;
+            border-color: $button-color;
+            &:hover {
+                background-color: $button-color;
+                color: $text-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./index.js" defer></script>
+        <title>Cadastro DEV's</title>
+    </head>
+    <body>
+        <form>
+            <div class="name">
+                <h1>Nome</h1>
+                <div class="developersName">
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="name" id="nome" value="Gabriel" />
+                </div>
+                <br />
+
+                <button onclick="createForm()" type="button">
+                    Add Tecnology
+                </button>
+            </div>
+            <div class="content"></div>
+            <br />
+            <button id="submitForm" type="submit">Cadastrar</button>
+        </form>
+    </body>
+</html>

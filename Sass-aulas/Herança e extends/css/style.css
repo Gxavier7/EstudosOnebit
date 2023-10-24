@@ -1,0 +1,47 @@
+* {
+  background: black;
+}
+
+.btn {
+  width: 85px;
+  display: block;
+  padding: 10px 0px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  background-color: black;
+}
+.btn.btn-roxo {
+  color: #800080;
+  transition: 0.5s;
+  border: 2px solid #800080;
+  box-shadow: 0px 5px 5px #800080;
+}
+.btn.btn-roxo:hover {
+  transition: 0.5s;
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px #800080;
+}
+.btn.btn-amarelo {
+  color: #ffff00;
+  transition: 0.5s;
+  border: 2px solid #ffff00;
+  box-shadow: 0px 5px 5px #ffff00;
+}
+.btn.btn-amarelo:hover {
+  transition: 0.5s;
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px #ffff00;
+}
+.btn.btn-azul {
+  color: #00ffff;
+  transition: 0.5s;
+  border: 2px solid #00ffff;
+  box-shadow: 0px 5px 5px #00ffff;
+}
+.btn.btn-azul:hover {
+  transition: 0.5s;
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px #00ffff;
+}
+
+/*# sourceMappingURL=style.css.map */

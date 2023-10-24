@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+		<title>Jogo da Velha</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="inputPlayer">
+				<label for="playerOne">X:</label>
+				<input type="text" name="players" id="playerOne" data-mark="X" />
+			</div>
+			<div class="inputPlayer">
+				<label for="playerTwo">O:</label>
+				<input type="text" name="players" id="playerTwo" data-mark="O"/>
+			</div>
+			<button class="start" id="start" type="submit" name="players">Jogar</button>
+		</header>
+		<main>
+			<div class="title">
+				<p id="currentPlayer">Jogador: </p>
+				<p id="marker">X</p>
+			</div>
+			<div class="game">
+				<button class="btn" id="1"></button>
+				<button class="btn" id="2"></button>
+				<button class="btn" id="3"></button>
+				<button class="btn" id="4"></button>
+				<button class="btn" id="5"></button>
+				<button class="btn" id="6"></button>
+				<button class="btn" id="7"></button>
+				<button class="btn" id="8"></button>
+				<button class="btn" id="9"></button>
+			</div>
+			<div class="winner"
+				<p>Vencedor:</p>
+				<p id="result"></p>
+			</div>
+		</main>
+	</body>
+	<script src="./index.js"></script>
+</html>

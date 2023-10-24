@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+/* Header e Footer */
+.bar {
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background-color: #393939;
+    justify-content: space-between;
+}
+.bar img {
+    width: 200px;
+}
+.bar .link a {
+    color: white;
+    margin-left: 10px;
+    border-bottom: 2px solid transparent;
+}
+.bar .link a:hover {
+    transition: 0.4s;
+    border-bottom: 2px solid red;
+}
+/* Main */
+main {
+    padding: 20px 15px;
+}
+/* Title */
+.home {
+    font-size: 20px;
+    text-align: center;
+}
+#home {
+    font-size: 25px;
+}
+
+/* Content */
+.content {
+    gap: 5px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: (3fr 1fr);
+    grid-template-areas: "sports section";
+}
+/* Sports */
+.sports {
+    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: sports;
+}
+/* Cards */
+.card {
+    width: 280px;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+.card img {
+    height: 150px;
+}
+.card:hover {
+    transition: 0.4s;
+    border: 2px solid black;
+}
+.card-text {
+    padding: 5px;
+}
+/* Section */
+.section {
+    gap: 5px;
+    padding: 25px;
+    display: flex;
+    color: white;
+    grid-area: section;
+    max-height: 1050px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #393939;
+}
+/* Section Cards */
+.s-box {
+    gap: 10px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid transparent;
+}
+.s-box:hover {
+    transition: 0.4s;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+@media (max-width: 680px) {
+    .content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sports {
+        justify-content: center;
+    }
+}
+@media (max-width: 420px) {
+    .content {
+        padding: 5px;
+    }
+    .bar {
+        gap: 10px;
+        flex-direction: column;
+    }
+} ;

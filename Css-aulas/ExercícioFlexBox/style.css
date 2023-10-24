@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container {
+    min-height: 100vh;
+    background-color: #a9a9a9;
+    display: flex;
+    flex-flow: column;
+}
+.color {
+    background-color: white;
+    border: 2px solid black;
+    font-size: 30px;
+}
+.bar {
+    flex-basis: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+section {
+    gap: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 400px;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    width: 350px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@function color-title($background-color) {
+    @if (lightness($background-color) >50) {
+        @return black;
+    } @else {
+        @return white;
+    }
+}
+@mixin background-color-mixin($color) {
+    background-color: $color;
+    color: color-title($color);
+}
+.title {
+    @include background-color-mixin(rgb(40, 40, 82));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

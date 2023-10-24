@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/backgroundLp.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+body .container {
+  background-color: rgba(19, 18, 18, 0.7019607843);
+  max-width: 450px;
+}
+body .container .logo {
+  max-width: 17rem;
+}
+body .container .btn {
+  cursor: pointer;
+  color: #ff0043;
+  border-color: #ff0043;
+}
+body .container .btn:hover {
+  background-color: #ff0043;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=stylescss.css.map */
