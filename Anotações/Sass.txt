@@ -1,0 +1,11 @@
+Variáveis - Coloca-se $ para criar uma variável e para chama-la durante o código
+Nesting - No css para se referenciar a vários itens de uma classe se repete a classe para chamar o objeto
+    No Scss basta colocar a classe uma vez e referenciaro objeto dentro dela
+Import - Com o Sass é possível criar várias pastas para guardar variáveis como cores ou estilizações de 
+    páginas como da home para isso usa-se @import no arquivo principal 
+    OBS.: Se uma pasta depende da outra, esta outra deve vir importada primeiro
+Mixin - Faz um mix de informações
+Herança - Especifica mais o elemento e puxa as características do "pai"
+Extend - Puxa características de outros elementos
+Minify - Transforma o css em uma linha, ganha velocidade de acesso para usar coloque no terminal:
+    sass "acesso ao arquivo" --style compressed

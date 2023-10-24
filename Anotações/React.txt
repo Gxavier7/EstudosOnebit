@@ -1,0 +1,107 @@
+----- Para baixar o React é possivel usar por cdn com:
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+----- Vite
+Biblioteca que auxilia no processo de build, ele possui:
+    - Servidor de desenvolvimento
+    - Empacotador
+Ele é parecido com o Webpack, todavia é o mais indicado para o React atualmente
+Para criar um novo projeto com Vite basta dar:
+    npm create vite@latest
+
+----- Components
+São pedaços da tela que podem ser reutilizados 
+O nome de cada componente deve ser escrito em PascalCase
+Para chamar um componente dentro de outro deve se escrever como se fosse uma tag HTML:
+    - <NomeComponente />
+
+Para usar um componente de outro arquivo deve se usar os ESModules
+
+----- Construção 
+A escrita dos componentes é feita por uma extensão do JavaScript chamada JSX, ela possui algumas características particulares
+    - É uma mistuda de JavaScript com XML
+    - Sempre que for criar um componente deve-se criar uma função e dentro dela retornar o código jsx e deve-se colocar uma div para englobar 
+        o componente
+    - Em muitas linhas de código ao colocar várias div's englobando cada componente pode se acabar gerando um código HTML muito sujo, portanto
+        é uma boa prática de código usar o FRAGMENT: <Fragment><Fragment/> ou <></>
+    - Para chamar uma variável, expressão ou uma função no XML utiliza-se {nome_da_variável}. Obs.: Não é possível usar blocos de código 
+        como for, Switch dentro das chaves
+
+----- Estilização 
+Para estilizar componentes com o React é possível usar CSS ou SASS, existem 3 formas de importar os arquivos de estilização:
+
+    Inline: Para usar esse método é necessário colocar uma propriedade style={} dentro da Tag que engloba o componente, caso tenham vários
+        estilos deve-se usar um objeto JavaScript {} dentro da propriedade 
+
+        O uso inline é mais indicado para estilizações rápidas.
+
+    Global: Para usar esse método deve-se criar um arquivo css com as estilizações e importa-lo. Ex.:
+        import './styles/globals.css'
+
+        O uso global é mais indicado para importar estilizações direto no arquivo Main.
+
+    CSS Modules: Para usar esse método deve-se criar um arquivo com um nome "especial" Ex.: 
+        nome.module.css
+    Para se estilizar esse arquivo só é possível usar classes e id's para se referir aos itens do JSX, e para importar esse arquivo utilizamos:
+        import styles from './nome.module.css'
+    Qualquer classe criada dentro do arquivo css deve ser usada como uma propriedade do nome dado no import, no exemplo acima foi usado style,
+    então um exemplo onde header é o nome dado a classe seria:
+        className={style.header}
+
+        O uso de CSS Module é mais indicado para estilizações mais elaboradas
+
+    Obs.: O SASS funciona da mesma forma que o css.
+
+----- Props
+
+Argumentos que são passados para os nossos componentes.
+Passando props na declaração de argumentos ao criar a função do componente, tudo que for passado como argumento ficará disponível no objeto
+props, Ex.:
+
+function Card(props){
+    <h2><h2/>
+}
+ 
+<Card title="Up: Altas aventuras" />
+
+Para chamar esse título
+
+function Card(props){
+    <h2> {props.title} <h2/>
+}
+
+Como as props são um objeto, também é possível passar diretamente o que se espera receber como argumento Ex.:
+
+function Card({title, paragraph}){
+    <h2><h2/>
+}
+ 
+<Card title="Up: Altas aventuras" />
+
+Para chamar esse título
+
+function Card(title, paragraph){
+    <h2> {title} <h2/>
+}
+
+----- Children
+
+Objeto das props que são passados como filhos para os nossos componentes.
+Passando props.children na declaração do componente, tudo que for passado como filho do componente será acrescentado dentro do componente. Ex.:
+
+function Card(props){
+    <div> {props.children} <div/>
+}
+
+<Card>
+    <h2> Olá mundo <h2/>
+    <button> Follow <button/>
+<Card/>
+
+Tudo que for passado dentro do Card será acrescentado dentro da função do componente.
+
+----- Props com rest params
+
+Ao passar várias props na chamada do componente você pode chama-la usar o operador Spread (...), para isso deve-se colocar na declaração do 
+    componente {...props}, dizendo que deve-se retornar cada prop que foi passada na chamada

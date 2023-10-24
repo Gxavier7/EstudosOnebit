@@ -1,0 +1,114 @@
+~~~~~~~Regra Css~~~~~~
+
+Seletor    Declaração - possui propriedade e valor
+  h1     {color: blue;}
+
+~~~~~~~Background~~~~~~
+
+Background: Fundo do objeto ou da pagina
+Background-image: Define o fundo da página como uma imagem
+Background-repeat: Define se a imagem de fundo irá se repetir
+Background-size: Define o tamanho da imagem (cover - cobre a extesão da página ou objeto)
+
+~~~~~~~Border~~~~~~
+
+Border - Coloca uma borda no elemento 
+Border-width - Define a espessura da borda
+Border-style - Define o tipo de borda (dashed - pontilhada)
+Border-color - Define a cor da borda
+
+~~~~~~~Seletores~~~~~~
+
+* (Star) - Muda Configuração de todo o projeto
+Li a (Descendência) - Seleciona todas as tags <a> que estão dentro de <Li>
+Li > a (Filho) - Seleciona todas as tags <a> que são filhos de <Li>
+Li + a (Adjascente) - Seleciona todas as tags <a> que vierem logo após (fora) <Li>
+a[Atributo] - Seleciona todos as tags <a> que tem um atributo específico Ex.:(href)
+Li:nth-of-type(2) - Selecionar todos os elementos <Li> que vierem em 2°
+
+~~~~~~~Especificidade~~~~~~
+
+Cada elemento classe ou Id vale pontos 
+Cada elemento /pseudo elemento -> +1
+Cada classe /pseudo classe -> +10
+Cada Id -> +100
+Estilo inline (style dentro do HTML) -> 1000
+
+~~~~~~~Herança~~~~~~
+
+Os filhos herdam as propriedades dos filhos
+Caso o filho não herde a propriedade pode ser usado a propriedade atributo: inherit
+
+~~~~~~~~~~~~~~Treinamento para astronautas~~~~~~~~~~~~~
+
+~~~~~~~Fonte~~~~~~
+
+Font-Family - Define a fonte do elemento
+Font-size - Define o tamanho da fonte
+Font-weight - Define o peso da fonte
+Line-height - Define o espaçamento da linha
+
+~~~~~~~Texto~~~~~~
+
+Text-align - Alinha o texto 
+Text-decoration - Decora o texto como (underline, line-through)
+
+~~~~~~~Partes do box Model~~~~~~
+
+Margin - Limpa uma área fora da borda
+Border - Borda entre margem e o padding
+Padding - Espaçamento entre um conteudo e sua borda
+Content - Conteudo da caixa que compreende textos e imagens
+
+~~~~~~~~~~~~~~Blog~~~~~~~~~~~~~
+
+~~~~~~~Media Querys~~~~~~~
+
+@Media {}- altera configurações do css apartir do tamanho da tela
+@Media (max-width) {}- Pc para Celular
+@Media (min-width) {}- Celular para Pc
+
+~~~~~~~~~~~~~~Responsividade~~~~~~~~~~~~~
+
+~~~~~~~FlexBox~~~~~~~
+
+FlexBox - Organixa o container de acordo com o tamanho do dispositivo
+Flex-Direction - Informa a orientação do FlexBox
+Display - Especifica o tipo de caixa de renderização
+Display column - Especifica o tipo de caixa de renderização para coluna
+Display column-reverse - Especifica o tipo de caixa de renderização para coluna reversa
+Gap - Espaçamento entre elementos (Primeiro valor aplica ao Row-Gap e Segundo ao Column-Gap)
+Row-Gap - Espaçamento entre elementos na horizontal
+Column-Gap - Espaçamento entre elementos na vertical
+Justify-Content (Para row)- Alinha horizontalmente o item
+Justify-Content (Para column)- Alinha verticalmente o item
+Align-Itens - Stretch - Estica verticalmente o item (necessário comentar a height)
+Align-Itens (Para row)- Alinha verticalmente o item
+Align-Itens (Para column)- Alinha horizontalmente o item
+Flex-Wrap (Inicia com nowrap) - Quebra FlexBox para ajustar com a largura da tela
+
+~~~~~~~~~~~~~~FlexBox1~~~~~~~~~~~~~
+
+Flex-Basis - Especifica o comprimento inicial de um item
+Flex-Grow - Cresce os itens sem quebrar layout
+Flex-Basis | Flex-Grow - Basis = Define uma largura minima antes da quebra, Grow = estica os itens para preencher a tela
+  os itens diminuem até chegar ao Basis e depois quebra deixando responsivo
+Flex-Shrink - Permite ao item diminuir quantas vezes for definida Ex.: 2 Diminui metade em comparação aos demais itens Flex
+Align-Self - Alinhamento próprio na vertical
+
+~~~~~~~~~~~~~~Exercício FLexBox~~~~~~~~~~~~
+
+~~~~~~~Grid~~~~~~~
+
+Display: Grid - Define o Grid
+Grid-Template-Columns - Define a divisão das colunas (Usar ou % ou frame - fr)
+  Pode-se usar Repeat(Quantidade, Tamanho) para facilitar 
+Grid-Template-Rows - Define a divisão das Linhas (Usar ou % ou frame - fr)
+  Pode-se usar Repeat(Quantidade, Tamanho) para facilitar 
+Grid-Auto-Rows - Define o tamanho das Linhas, Pode usar o minmax(define tamanho mínimo e máximo das linhas)
+
+~~~~~~~~~~~~~~Grid Layout Css tem todos~~~~~~~~~~~~
+
+Grid-Column - Define o tamanho horizontal do objeto dentro do grid
+Grid-Template-Area - Define qual item vai ocupar qual area
+Grid-Area - Define o nome do item no Grid Template

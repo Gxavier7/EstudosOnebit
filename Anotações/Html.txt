@@ -1,0 +1,45 @@
+h1 - Título
+p - parágrafo (Da enter no texto)
+Strong - Negrito
+b - Negrito
+s - risca o texto
+a - âncora
+img - imagem
+hr - faz uma barra
+
+ol > li - Listas ordenadas: números
+ul > li - Listas não ordenadas: pontos 
+
+~~~~~~~GuiaGaláxias~~~~~~
+
+Table - Engloba uma tabela ( border = 1 (mostra a borda da tabela) )
+Caption - Título da tabela
+Thead - Engloba o cabeçalho da tabela
+Tbody - Engloba o corpo da tabela
+Table > tr - Engloba uma linha da tabela
+Table > tr > th - Nome das colunas
+Table > tr > td - Valor da linha
+
+~~~~~~~Tabela~~~~~~
+
+Form - Campos para receber entrada de dados
+Form action="" - Para onde o dado submetido será enviado
+Form - Campos para receber entrada de dados
+Fildset - Usado para agrupar elementos relacionados
+Input - Tipo de dado que será recebido
+Input type="text"- Tipo de dado texto que será recebido
+Input type="number"- Tipo de dado número que será recebido (possui minimo e máximo)
+Input type="e-mail"- Tipo de dado email que será recebido
+Input type="radio"- Tipo de dado escolha que será recebido
+Input type="checkbox"- Tipo de dado seleção que será recebido
+Input type="submit"- Tipo de dado que será submetido
+Input placeholder="" - Texto que fica escrito dentro do Input type="text"
+Input value="" - Texto que será compreendido dentro do botão Input type="Submit"
+Input required="" - Texto que será informado caso botão Input type="Submit" não seja preenchido
+Label for=""- Texto associado a um input
+Datalist (Precisa input) ou Select (Não precisa input) - input com opções específicas
+Datalist > option - opções específicas do input
+
+~~~~~~~Form~~~~~~
+~~~~~~~Completo~~~~~~
+

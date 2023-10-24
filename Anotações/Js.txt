@@ -1,0 +1,388 @@
+----- Organização dos projetos
+Pastas
+Src - Pasta para guardar todos os arquivos fontes do projeto 
+Dist - Pasta de distribuição que vai conter o projeto "finalizado"
+Styles - Pasta para guardar os arquivos de estilização
+Node_Modules - Pasta que irá conter os módulos usados pelo node
+
+
+----- Variáveis
+Servem para armazenar dados no nosso código, dados esses que serão usados posteriormente
+SEMPRE USAR NOMES SIGNIFICATIVOS PARA AS VARIÁVEIS
+Camel Case: nomeDeUsuario
+Pascal Case: NomeDeUsuario
+Snake Case: nome_de_usuario
+Kebab Case: nome-de-usuario
+
+----- Formas de criar variáveis
+ParseFloat: Transforma o valor recebido em número
+Var: Cria a variável e permite ser alterada o valor
+Let: Igual ao var mas mais usual
+Const: Cria uma variável constante que não muda
+
+----- Tipos Primitivos
+Number: Qualquer tipo de número
+Float: Números com virgula, pontos flutuantes
+Bigint: Números inteiros muito grandes, para representa-los coloca-se um N no final
+String: Qualquer texto, deve ser colocada dentro de ""
+Boolean: Valores True or False
+Null: Valor vazio mas que tem um valor
+Undefined: Valor vazio sem nenhum valor
+Nan: Not a Number
+
+----- Tipos Elaborados
+Objeto: Coleção de vários valores
+Funções: Comandos que quando são executados geram algo no console
+
+----- Operadores
+Operadores: Simbolos que servem para obter interações entre objetos, são eles
+  Aritméticos: +, -, *, /, %
+  Agrupamento: ()
+  Atribuição: =, +=, -=, *=, /=, %=
+  Encadeamento: .
+  Incrementar: ++
+  Decrementar: --
+
+----- Comandos
+Console: Mostra informações no console
+  Console.log(variável): mostra a variável no console
+  Console.error(variável): mostra a variável no console com tema de error
+  Console.warn(variável): mostra a variável no console com tema de warning
+Window: Mostra informações na janela (Não precisa ser referenciado ou seja apenas colocando o alert funciona)
+  Window.alert(variavel): mostra uma caixa com uma alerta
+  Window.prompt(variavel): mostra uma caixa com para receber valores
+  Window.confirm(variavel): mostra uma caixa com para receber uma confirmação
+Document: Referencia à página HTML
+
+----- Comparadores
+==: Compara se igual levando em conta apenas o tipo
+===: Compara se igual o valor e o tipo
+!=: Compara se diferente levando em conta apenas o tipo
+!==: Compara se diferente o valor e o tipo
+
+----- Operadores Lógicos
+And: "&&" Quando um e outro forem verdadeiros
+Or: "||" Quando um dos dois forem verdadeiros
+Not: "!" Inverte o resultado dos outros operadores
+
+----- Estruturas Condicionais
+If: Permite execução de códigos apenas se uma condição for verdadeira
+Else: Se a condição não for verdadeira executa-se outra sequência de código
+Operador ternário: Simplifica o If, Else em uma linha de código
+  Ex.: (Const resultado = condição ? resultado_verdadeiro ":" resultado_falso)
+Switch: Permite inserir respostas de código para vários casos de acordo com a condição fornecida
+  Ao final de cada case deve-se colocar um brake, caso contrário serão executadas todas as linhas de 
+  código abaixo do case escolhido
+  
+----- Estruturas de Repetição
+While: Laço de repetição enquanto uma condição for verdadeira
+Do While: Permite a execução do código pelomenos uma vez antes de verificar a condição
+For: Existe para abreviar o código em casos que tem uma estrutura específica(
+  Inicialização(Expressão executada antes de tudo), 
+  Condição(Semelhante ao While, é testada antes da execução do bloco de código), 
+  Finalização(Execução apos o bloco de repetição))
+
+----- Estruturação de dados
+Lista Ligada: Lista onde cada elemento aponta para o próximo
+Listas (Array): Coleção de elementos identificados por um índice [], Usam referência
+Fila(Queue ou FIFO -> First In, First Out): Coleção de elementos onde o primeiro a entrar é o primeiro a sair 
+Pilha(Stack ou LIFO -> Last In, First Out): Coleção de elementos onde o último a ser colocado é o 
+  primeiro a ser retirado
+Árvore (Tree): Possui nós (nodes) que podem estar abaixo ou acima de outros nós
+Dicionários: Coleção de elementos que tem uma chave e um valor
+
+----- Arrays
+array.push: Adiciona elemento ao final do array
+array.unshift: Adiciona elemento ao inicio do array
+array.pop: Remove o ultimo elemento do final do array e retorna ele
+array.shift: Remove elemento do inicio do array e retorna ele
+array.includes: Verifica se um valor existe dentro do Array, retorna Verdadeiro ou falso
+array.indexOf: Verifica a posição de um valor dentro do Array, retorna a posição
+constante = array.slice(inicio,final(Ñ incluso)): Copia os valores das posições determinadas e coloca em outra 
+  variável, se o valor for negativo começa do final
+constante = array.concat(arrays que quiser juntar): Junta diversos arrays em um outro
+array.splice(inicio, quantidade a ser removido, substituição): Substitui uma objeto dentro de um array
+
+----- Arrays Bidimensionais
+Um array que possui um array dentro de uma posição
+Para referenciar os itens dentro do array Bidimensional vc deve referenciar a posição dele no array e colocar []
+  para navegar dentro dele
+Console.table: Imprime os arrays Bidimensionais no console
+
+----- Objetos
+Estrutura para se trabalhar com dicionário chave-valor
+O par chave-valor é chamado de propriedade
+Para criar um objeto: let objeto = {}
+É composto por Objeto.propriedade
+  É possível passar parâmetros colocando-os dentro de um () após a propriedade
+Quando se coloca [] após o objeto é possível referenciar valores dentro de variáveis e expressões
+This. -> Referencia o próprio objeto
+
+----- Funções
+Declara um bloco de código que será executado toda vez que a função for chamada
+Sintaxe:
+function nomeDaFunção(entradas){
+  procedimentos
+  return saida
+}
+Parâmetros: É uma variável contida dentro da função que é definida quando se chama a função,
+  os parâmetros devem ser passados conforme foram informados. Parâmetros com valores definidos devem
+  ser declarados no final
+
+----- Escopo
+Contexto onde a variável foi declarada
+As variáveis de dentro podem acessar as de fora mas as de fora não podem acessar as de dentro
+
+----- Métodos
+São funções dentro de um objeto
+Não é necessário colocar function antes pode informar direto o nome da função que ja entende
+
+----- Funções Recursivas
+Função que chama ela mesma
+
+----- Funções Anônima
+São funções sem nome atreladas a uma variável
+
+----- Funções High-Order
+São funções que recebem como parâmetro outra função
+Map: Mapeia um array buscando uma função passada por parâmetro e guarda dentro de um novo array
+Filter: Filtra informações de um array baseado nos parâmetros passados e guarda dentro de um novo array
+Reduce: Executa uma função para cada valor de um array
+Sort: Ordena o Array segundo algum critérios
+
+----- Eventos
+Eventos é como um sensor que detecta quando o usuário faz mudanças na página
+onMouseEnter(''): Quando o mouse passa por cima gera um 'pulso' e executa uma ação
+onChange(''): Quando ocorre uma alteração gera um 'pulso' e executa uma ação
+onFocus(''): Quando o mouse coloca foco em uma box para digitar por exemplo gera um 'pulso' e executa uma ação
+onBlur(''): Quando o mouse tira o foco em uma box para digitar por exemplo gera um 'pulso' e executa uma ação
+onClick(''): Quando ocorre um click sobre algo gera um 'pulso' e executa uma ação
+addEventListener: Adiciona uma escuta sobre algum objeto e executa uma ação conforme o evento
+parentNode: Seleciona o pai do objeto referenciado
+preventdefalt: Previne a ação padrão do evento
+
+----- DOM - Document Object Model
+document.getElementById: Busca no HTML um ID e retorna ele
+document.getElementByTagName: Busca no HTML os elementos com aquela tag e retorna eles
+document.getElementByClassName: Busca no HTML os elementos com aquela classe e retorna eles
+document.querySelectorAll: Busca no HTML os elementos baseado nos parâmetros passados como no css
+document.querySelector: Busca no HTML o primeiro elementos baseado nos parâmetros passados como no css
+document.createElement: Cria um elemento HTML no JS para que este possa ser manipulado 
+nomeCreateElement.algumaCoisa\/: Permite colocar dentro do elemento caracteristicas do HTML como 
+    innerText: Coloca um texto dentro da classe
+    appendChild: Coloca um elemento dentro de outro
+
+----- Armazenamento no Navegador
+SessionStorage: Armazena os dados passados dentro da session, perde os dados quando a aba é fechada
+LocalStorage: Armazena os dados passados no Local, mantém os dados quando a aba é fechada
+Cookies: Armazena os dados passados no servidor, mantém os dados quando a aba é fechada
+
+----- Template Literals
+Nova forma de escrever strings com o Js utilizando acento crase (``)
+Permite utilizar código Js dentro da string usando ${}
+
+----- Arrow Functions
+Forma diferente de escrever funções anônimas
+Ela não possui seus próprios this, arguments, super e new.target
+
+Escrita: () => {}
+
+Caso tenha uma linha não necessita das {}
+Caso tenha apenas um parâmetro não necessita ()
+
+----- Desestruturação de Objetos e Arrays
+Permite criar variáveis a partir de propriedades de um objeto ou elementos de um array
+
+----- Spread
+Operador que permite espalhar elementos de um objeto iterável como Arrays e Strings
+
+Escrita: ...Elemento
+
+----- Rest Params
+Técnica que permite a uma função receber qualquer número de Parâmetros, deve ser passada como ultimo parâmetro
+
+Basta passar nos parâmetros o operador Spread
+
+----- Optional chaining
+Permite acessar propriedades de um objeto sem dar erros
+
+Escrita: ?.
+
+----- Nullish coalescing
+Operador lógico que retorne o seu operando do lado direito quando o seu operador do lado esquerdo é null ou undefined.
+  Caso contrário, ele retorna o seu operando do lado esquerdo
+
+Escrita: ??
+
+----- Módulos
+
+Agrupamentos de códigos com funcionalidades distintas que podem ser compartilhadas, adicionadas ou removidas
+
+----- CommonJS
+Forma de importar módulos fora dos navegadores
+Não é suportado por padrão pelos navegadores, porém usando o Node.Js funciona normalmente
+
+Para exportar um módulo
+  module.exports = nome
+
+Para importar um módulo
+  Const nome = require("./nome")
+
+----- ES Modules
+Forma de importar módulos nos navegadores
+Na tag Script dentro do html deve-se colocar type="module" para dizer que irá trabalhar com Modules
+Existem 4 maneiras de se utilizar o ES Modules 
+
+Para exportar um módulo
+- Export nomeado inline
+Não permite alterar o nome no import, caso seja necessário mudar o nome pode usar {variável as novo_nome}
+  Acrescentar a palavra "export" antes do que se deseja exportar seja uma função, variável, constante
+
+- Export default inline
+Permite alterar o nome no import, só pode ter um por arquivo
+  Acrescentar a palavra "export default" antes do que se deseja exportar seja uma função, variável, constante
+
+- Export nomeado
+  Exporta em grupo no final do Module com "export {função}"
+
+- Export default inline
+Permite alterar o nome no import, só pode ter um por arquivo
+  Exporta o default out of line  com um "export default" antes do nome do que se deseja importar
+
+Para importar um módulo
+  No arquivo que deseja importar utiliza-se a palavra reservada 
+  - import para export nomeado inline
+  import {aqui se passa o nome do que se deseja importar como nome_função ou nome_variável separados por virgula} from "caminho do módulo" 
+
+  - import para export default nomeado inline
+  parecido com o export inline, porém não se usam as chaves
+
+  - import para export nomeado
+  Da mesma maneira do export inline
+
+  - import para export default
+  Da mesma maneira do export defalt inline
+
+----- Node
+Npm (Node package Manager) - Gerenciador de pacotes do Node.Js
+Conjunto de ferramentas que permite compartilhar e baixar módulos na internet
+
+-- Comandos
+npm init - inicializa um projeto com Node
+npm init -y - inicializa um projeto com Node com todas as perguntas iniciais ja respondidas de maneira padrão
+npm install - para baixar pacotes no projeto
+npm install --save-dev OU npm install -D - para baixar pacotes durante o processo de desenvolvimento do projeto - eslint
+npm install --globall - para baixar pacotes em escopo global - sass
+npm uninstall - para desistalar pacotes no projeto
+npm run - roda um script definido, alguns comando especiais do node não pedem o run. Ex.: Npm start
+npx nome_do_arquivo_executável - comando usado para executar as bibliotecas que são instaladas
+
+----- Json
+Json (JavaScript Object Notation) - formato de arquivo em texto utilizado para troca de dados
+Utiliza o par chave-valor
+Para escrever o conteúdo deve-se usar a seguinte notação:
+"" - para nomear as chaves
+Valores devem receber tipos primitivos - String, Number, Boolean, Null
+{} - para definir grupos de propriedades (objetos)
+[] - para definir lista de dados (arrays)
+, - para separar as propriedades
+
+-- Scripts Npm
+Primeiro se passa um nome e depois o comando. Ex.: "start": "node nome_arquivo.js"
+A cada vez que rodar "npm start" rodará o comando definido: "node nome_arquivo.js"
+
+-- Objetos Json
+JSON.parse() // converte uma string para json-compatible
+JSON.stringify() // converte uma json-compatible para string
+
+
+----- Babel
+Compilador JavaScript - Converte o código de uma linguagem para outra, ele compila JavaScript para JavaScript
+Conjunto de várias ferramentas que converte Js mais recente para o mais antigo, tornando ele assim acessível em diversos navegadores
+Alguns recursos:
+Transformação da sintaxe
+Polyfill de recursos não existentes no ambiente alvo - Preenche buracos que em versões antigas do Js não existia
+Transformação de código
+
+-- Instalação
+@babel/core - Núcleo do Babel, parte que faz a compilação do código
+@babel/cli - Ferramenta de linha de comando do Babel
+@babel/preset-env - Configura o babel de maneira pré definida
+npm install -D @babel/core @babel/cli @babel/preset-env - O Babel é uma dependência utilizada durante desenvolvimento
+
+-- Para converter
+npx babel arquivo_fonte --out-file dist.js --presets=@babel/preset.env - Para converter um arquivo
+npx babel arquivo_fonte --out-dir dist.js --presets=@babel/preset.env - Para converter uma pasta
+
+babel.config.js - Arquivo de configuração do Babel
+
+----- Webpack
+Empacotador de módulo estático
+Seu objetivo é empacotar todos os módulos de uma aplicação  apartir de um ou mais pontos de entrada em um ou mais bundles,
+  que são arquivos estáticos contendo tudo o que a aplicação precisa para funcionar
+
+-- Peças chave do Webpack
+Entry - Entrada de onde o Webpack procurará arquivos para empacotar
+Output - Saída resultante do processo de empacotamento
+Loaders - Por padrão só entende Js e Json, porém os loaders permitem ele entender outros tipos de arquivos
+Plugins - Extensões para aprimorar o comportamento do Babel
+
+-- Instalação
+webpack - Núcleo do Webpack parte que faz a compilação do código
+webpack-cli - Ferramenta de linha de comando do Webpack
+npm install -D webpack webpack-cli - O Babel é uma dependência utilizada durante desenvolvimento
+
+-- Para configurar
+webpack.config.js - Arquivo de configuração do Webpack
+Dentro dela se define as Entrys, Outputs, Loaders, Plugins
+
+-- Para executar
+No CMD utilize: npx webpack
+
+-- Loaders
+Para utilizar deve-se baixar os loaders via CMD, importar o arquivo que deseja acrescentar 
+no arquivo principal do Js, e alterar o webpackconfig
+npm install --save-dev style-loader css-loader
+module: {
+  rules: [{
+    test: /\.css$/,
+    use: ['style-loader', 'css-loader']
+  }]
+}
+\. - serve para o compilador compreender o ponto, caso não colocasse a contrabarra ele não funcionaria
+$ - serve para indicar que o compilador deve testar se estiver no final 
+
+-- Plugins
+Para utilizar deve-se baixar os plugins via CMD
+  npm install --save-dev mini-css-extract-plugin
+
+No webpack.config deve se fazer um require do plugin.
+  const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+E alterar as configurações do webpack.config
+  plugins: [
+    new MiniCssExtractPlugin()
+  ]
+
+No caso de uso desse plugin para utilizado deve se fazer alterações no Loader também,
+  module: {
+    rules: [{
+      test: /\.css$/,
+      use: [MiniCssExtractPlugin.loader, 'css-loader']
+    }]
+  }
+
+--Webpack Dev Server
+Live server do Webpack
+npm i -D webpack-dev-server
+
+Deve-se configurar dentro do webpack.config.js com:
+devServer:{
+  static:{
+    directory: path.resolve(__dirname, 'dist')
+  },
+  compress: true,
+  port: 8000
+},
+
+----- Webpack
