@@ -86,7 +86,6 @@ function Card(title, paragraph){
 }
 
 ----- Children
-
 Objeto das props que são passados como filhos para os nossos componentes.
 Passando props.children na declaração do componente, tudo que for passado como filho do componente será acrescentado dentro do componente. Ex.:
 
@@ -102,6 +101,47 @@ function Card(props){
 Tudo que for passado dentro do Card será acrescentado dentro da função do componente.
 
 ----- Props com rest params
-
 Ao passar várias props na chamada do componente você pode chama-la usar o operador Spread (...), para isso deve-se colocar na declaração do 
     componente {...props}, dizendo que deve-se retornar cada prop que foi passada na chamada
+
+----- Eventos no React
+Para usar Eventos no React basta chamar como um argumento os evento precedido de on. Ex.: onClick={}
+    Dentro das aspas deve-se chamar a função necessária.
+
+----- State
+Recurso do React que permite ter informações na tela que são renderizadas e depois atualizadas dinamicamente segundo a mudança dos valores no
+    JavaScript, uma vez que o React usa o virtual DOM
+Para usar o State deve-se:
+Importar:
+    import { useState } from "react"
+
+Declarar o valor a função modificadora (sempre com prefixo set) e um valor inicial:
+//        valor  função     valor inicial
+    const [text, setText] = useState("follow")
+
+Para se chamar o valor basta chamar o valor como variável: 
+    {text}
+
+Para se atualizar esse valor basta chamar a função:
+    useText("Following")
+
+----- Hooks
+Funções especiais do React que permite se conectar ao sistema interno, ele possui algumas regras:
+1 - Só pode chamar um hook dentro de uma função de um componente React
+2 - Sempre chamar os Hooks no topo das funções
+
+----- Hooks customizáveis
+Para se armazenar hooks customizáveis deve-se usar como boa prática nomes dos arquivos como useCounter, useText. Sendo esses criados como um 
+    arquivo js
+
+----- Prop-types
+Para executar a checagem de tipos das props e evitar erros do EsLint podemos usar os prop-types que é um pacote do React
+Para instalar: npm install prop-types
+
+Para utilizar: 
+nomeComponente.propTypes = {
+    valorState: PropTypes.tipoDoValor,
+    setFunçãoState: propTypes.func
+}
+
+Deve ser colocado antes da função do componente

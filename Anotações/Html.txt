@@ -1,3 +1,4 @@
+----- Tags principais
 h1 - Título
 p - parágrafo (Da enter no texto)
 Strong - Negrito
@@ -10,8 +11,7 @@ hr - faz uma barra
 ol > li - Listas ordenadas: números
 ul > li - Listas não ordenadas: pontos 
 
-~~~~~~~GuiaGaláxias~~~~~~
-
+----- Guia Galáxias
 Table - Engloba uma tabela ( border = 1 (mostra a borda da tabela) )
 Caption - Título da tabela
 Thead - Engloba o cabeçalho da tabela
@@ -20,8 +20,7 @@ Table > tr - Engloba uma linha da tabela
 Table > tr > th - Nome das colunas
 Table > tr > td - Valor da linha
 
-~~~~~~~Tabela~~~~~~
-
+----- Tabela
 Form - Campos para receber entrada de dados
 Form action="" - Para onde o dado submetido será enviado
 Form - Campos para receber entrada de dados
@@ -40,6 +39,4 @@ Label for=""- Texto associado a um input
 Datalist (Precisa input) ou Select (Não precisa input) - input com opções específicas
 Datalist > option - opções específicas do input
 
-~~~~~~~Form~~~~~~
-~~~~~~~Completo~~~~~~
 
