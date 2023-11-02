@@ -145,3 +145,5 @@ nomeComponente.propTypes = {
 }
 
 Deve ser colocado antes da função do componente
+
+Parei na aula 25
