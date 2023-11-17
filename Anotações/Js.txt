@@ -387,3 +387,15 @@ devServer:{
 
 ----- POO
 
+POO é um paradigma de programação que é um conjunto de conceitos e recursos de linguagem que guiam a forma como programamos, e tem como peça
+  central os objetos
+
+-- Classes 
+São como fábricas de objetos a partir de uma "fôrma"
+
+-- Instâncias
+Objetos fabricados pelas Classes
+
+-- Função construtora
+São funções que retornam um objeto, servem como a forma das classes, para chamá-la
+  const nome = new Função(params)
