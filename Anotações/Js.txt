@@ -399,3 +399,6 @@ Objetos fabricados pelas Classes
 -- Função construtora
 São funções que retornam um objeto, servem como a forma das classes, para chamá-la
   const nome = new Função(params)
+
+-- Associação
+Relacionamento entre classes que permite uma instância fazer outra realizar uma ação
