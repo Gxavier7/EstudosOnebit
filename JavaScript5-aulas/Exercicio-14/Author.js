@@ -7,8 +7,10 @@ class Author{
     this.posts = [];
   }
 
-  addPost(title, post){
-    this.posts.push(new Post(title, post, this.name));
+  addPost(title, content){
+    const post = new Post(title, content, this);
+    this.posts.push(post);
+    return post;
   }
 
 }
