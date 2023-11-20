@@ -163,7 +163,7 @@ preventdefalt: Previne a ação padrão do evento
 
 ----- DOM - Document Object Model
 document.getElementById: Busca no HTML um ID e retorna ele
-document.getElementByTagName: Busca no HTML os elementos com aquela tag e retorna eles
+document.getElementByName: Busca no HTML os elementos com aquela tag e retorna eles
 document.getElementByClassName: Busca no HTML os elementos com aquela classe e retorna eles
 document.querySelectorAll: Busca no HTML os elementos baseado nos parâmetros passados como no css
 document.querySelector: Busca no HTML o primeiro elementos baseado nos parâmetros passados como no css
@@ -402,3 +402,16 @@ São funções que retornam um objeto, servem como a forma das classes, para cha
 
 -- Associação
 Relacionamento entre classes que permite uma instância fazer outra realizar uma ação
+
+-- Encapsulamento
+Princípio de impedir que determinada parte da classe seja acessível conforme o contexto exterior. No JS existem 2 níveis:
+
+  Público: onde o método ou atributo é acessível fora da classe
+
+  Privado: onde o método ou atributo é acessível somente dentro da classe. Utiliza-se # antes do começo do atributo para definir como privado
+
+-- Herança 
+Recurso que permite criar classes "Filhas" ou "Subclass" que "herdam" todos os atributos e métodos de uma "Superclass" ou classe "Pai"
+
+Quando uma classe herda os atributos de outra classe e deseja acrescentar outros deve se chamar o "super" que referencia o construtor da classe
+  Pai
