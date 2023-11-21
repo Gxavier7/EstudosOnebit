@@ -415,3 +415,8 @@ Recurso que permite criar classes "Filhas" ou "Subclass" que "herdam" todos os a
 
 Quando uma classe herda os atributos de outra classe e deseja acrescentar outros deve se chamar o "super" que referencia o construtor da classe
   Pai
+
+-- Polimorfismo
+Polimorfismo é o conceito que descreve o ato de um objeto poder assumir diferentes formas, na POO é usada na sobrescrita de métodos (uma classe
+  filha pode ter sua própria implementação dos métodos da classe mãe
+)
