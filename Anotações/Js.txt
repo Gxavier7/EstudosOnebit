@@ -14,11 +14,13 @@ Pascal Case: NomeDeUsuario
 Snake Case: nome_de_usuario
 Kebab Case: nome-de-usuario
 
+
 ----- Formas de criar variáveis
 ParseFloat: Transforma o valor recebido em número
 Var: Cria a variável e permite ser alterada o valor
 Let: Igual ao var mas mais usual
 Const: Cria uma variável constante que não muda
+
 
 ----- Tipos Primitivos
 Number: Qualquer tipo de número
@@ -30,9 +32,11 @@ Null: Valor vazio mas que tem um valor
 Undefined: Valor vazio sem nenhum valor
 Nan: Not a Number
 
+
 ----- Tipos Elaborados
 Objeto: Coleção de vários valores
 Funções: Comandos que quando são executados geram algo no console
+
 
 ----- Operadores
 Operadores: Simbolos que servem para obter interações entre objetos, são eles
@@ -42,6 +46,7 @@ Operadores: Simbolos que servem para obter interações entre objetos, são eles
   Encadeamento: .
   Incrementar: ++
   Decrementar: --
+
 
 ----- Comandos
 Console: Mostra informações no console
@@ -54,16 +59,19 @@ Window: Mostra informações na janela (Não precisa ser referenciado ou seja ap
   Window.confirm(variavel): mostra uma caixa com para receber uma confirmação
 Document: Referencia à página HTML
 
+
 ----- Comparadores
 ==: Compara se igual levando em conta apenas o tipo
 ===: Compara se igual o valor e o tipo
 !=: Compara se diferente levando em conta apenas o tipo
 !==: Compara se diferente o valor e o tipo
 
+
 ----- Operadores Lógicos
 And: "&&" Quando um e outro forem verdadeiros
 Or: "||" Quando um dos dois forem verdadeiros
 Not: "!" Inverte o resultado dos outros operadores
+
 
 ----- Estruturas Condicionais
 If: Permite execução de códigos apenas se uma condição for verdadeira
@@ -74,6 +82,7 @@ Switch: Permite inserir respostas de código para vários casos de acordo com a 
   Ao final de cada case deve-se colocar um brake, caso contrário serão executadas todas as linhas de 
   código abaixo do case escolhido
   
+
 ----- Estruturas de Repetição
 While: Laço de repetição enquanto uma condição for verdadeira
 Do While: Permite a execução do código pelomenos uma vez antes de verificar a condição
@@ -81,6 +90,7 @@ For: Existe para abreviar o código em casos que tem uma estrutura específica(
   Inicialização(Expressão executada antes de tudo), 
   Condição(Semelhante ao While, é testada antes da execução do bloco de código), 
   Finalização(Execução apos o bloco de repetição))
+
 
 ----- Estruturação de dados
 Lista Ligada: Lista onde cada elemento aponta para o próximo
@@ -90,6 +100,7 @@ Pilha(Stack ou LIFO -> Last In, First Out): Coleção de elementos onde o últim
   primeiro a ser retirado
 Árvore (Tree): Possui nós (nodes) que podem estar abaixo ou acima de outros nós
 Dicionários: Coleção de elementos que tem uma chave e um valor
+
 
 ----- Arrays
 array.push: Adiciona elemento ao final do array
@@ -103,11 +114,13 @@ constante = array.slice(inicio,final(Ñ incluso)): Copia os valores das posiçõ
 constante = array.concat(arrays que quiser juntar): Junta diversos arrays em um outro
 array.splice(inicio, quantidade a ser removido, substituição): Substitui uma objeto dentro de um array
 
+
 ----- Arrays Bidimensionais
 Um array que possui um array dentro de uma posição
 Para referenciar os itens dentro do array Bidimensional vc deve referenciar a posição dele no array e colocar []
   para navegar dentro dele
 Console.table: Imprime os arrays Bidimensionais no console
+
 
 ----- Objetos
 Estrutura para se trabalhar com dicionário chave-valor
@@ -117,6 +130,7 @@ Para criar um objeto: let objeto = {}
   É possível passar parâmetros colocando-os dentro de um () após a propriedade
 Quando se coloca [] após o objeto é possível referenciar valores dentro de variáveis e expressões
 This. -> Referencia o próprio objeto
+
 
 ----- Funções
 Declara um bloco de código que será executado toda vez que a função for chamada
@@ -129,19 +143,24 @@ Parâmetros: É uma variável contida dentro da função que é definida quando 
   os parâmetros devem ser passados conforme foram informados. Parâmetros com valores definidos devem
   ser declarados no final
 
+
 ----- Escopo
 Contexto onde a variável foi declarada
 As variáveis de dentro podem acessar as de fora mas as de fora não podem acessar as de dentro
+
 
 ----- Métodos
 São funções dentro de um objeto
 Não é necessário colocar function antes pode informar direto o nome da função que ja entende
 
+
 ----- Funções Recursivas
 Função que chama ela mesma
 
+
 ----- Funções Anônima
 São funções sem nome atreladas a uma variável
+
 
 ----- Funções High-Order
 São funções que recebem como parâmetro outra função
@@ -149,6 +168,7 @@ Map: Mapeia um array buscando uma função passada por parâmetro e guarda dentr
 Filter: Filtra informações de um array baseado nos parâmetros passados e guarda dentro de um novo array
 Reduce: Executa uma função para cada valor de um array
 Sort: Ordena o Array segundo algum critérios
+
 
 ----- Eventos
 Eventos é como um sensor que detecta quando o usuário faz mudanças na página
@@ -161,6 +181,7 @@ addEventListener: Adiciona uma escuta sobre algum objeto e executa uma ação co
 parentNode: Seleciona o pai do objeto referenciado
 preventdefalt: Previne a ação padrão do evento
 
+
 ----- DOM - Document Object Model
 document.getElementById: Busca no HTML um ID e retorna ele
 document.getElementByName: Busca no HTML os elementos com aquela tag e retorna eles
@@ -172,14 +193,17 @@ nomeCreateElement.algumaCoisa\/: Permite colocar dentro do elemento caracteristi
     innerText: Coloca um texto dentro da classe
     appendChild: Coloca um elemento dentro de outro
 
+
 ----- Armazenamento no Navegador
 SessionStorage: Armazena os dados passados dentro da session, perde os dados quando a aba é fechada
 LocalStorage: Armazena os dados passados no Local, mantém os dados quando a aba é fechada
 Cookies: Armazena os dados passados no servidor, mantém os dados quando a aba é fechada
 
+
 ----- Template Literals
 Nova forma de escrever strings com o Js utilizando acento crase (``)
 Permite utilizar código Js dentro da string usando ${}
+
 
 ----- Arrow Functions
 Forma diferente de escrever funções anônimas
@@ -190,23 +214,28 @@ Escrita: () => {}
 Caso tenha uma linha não necessita das {}
 Caso tenha apenas um parâmetro não necessita ()
 
+
 ----- Desestruturação de Objetos e Arrays
 Permite criar variáveis a partir de propriedades de um objeto ou elementos de um array
+
 
 ----- Spread
 Operador que permite espalhar elementos de um objeto iterável como Arrays e Strings
 
 Escrita: ...Elemento
 
+
 ----- Rest Params
 Técnica que permite a uma função receber qualquer número de Parâmetros, deve ser passada como ultimo parâmetro
 
 Basta passar nos parâmetros o operador Spread
 
+
 ----- Optional chaining
 Permite acessar propriedades de um objeto sem dar erros
 
 Escrita: ?.
+
 
 ----- Nullish coalescing
 Operador lógico que retorne o seu operando do lado direito quando o seu operador do lado esquerdo é null ou undefined.
@@ -214,9 +243,11 @@ Operador lógico que retorne o seu operando do lado direito quando o seu operado
 
 Escrita: ??
 
+
 ----- Módulos
 
 Agrupamentos de códigos com funcionalidades distintas que podem ser compartilhadas, adicionadas ou removidas
+
 
 ----- CommonJS
 Forma de importar módulos fora dos navegadores
@@ -227,6 +258,7 @@ Para exportar um módulo
 
 Para importar um módulo
   Const nome = require("./nome")
+
 
 ----- ES Modules
 Forma de importar módulos nos navegadores
@@ -263,9 +295,11 @@ Para importar um módulo
   - import para export default
   Da mesma maneira do export defalt inline
 
+
 ----- Node
 Npm (Node package Manager) - Gerenciador de pacotes do Node.Js
 Conjunto de ferramentas que permite compartilhar e baixar módulos na internet
+
 
 -- Comandos
 npm init - inicializa um projeto com Node
@@ -277,6 +311,7 @@ npm uninstall - para desistalar pacotes no projeto
 npm run - roda um script definido, alguns comando especiais do node não pedem o run. Ex.: Npm start
 npx nome_do_arquivo_executável - comando usado para executar as bibliotecas que são instaladas
 
+
 ----- Json
 Json (JavaScript Object Notation) - formato de arquivo em texto utilizado para troca de dados
 Utiliza o par chave-valor
@@ -287,9 +322,11 @@ Valores devem receber tipos primitivos - String, Number, Boolean, Null
 [] - para definir lista de dados (arrays)
 , - para separar as propriedades
 
+
 -- Scripts Npm
 Primeiro se passa um nome e depois o comando. Ex.: "start": "node nome_arquivo.js"
 A cada vez que rodar "npm start" rodará o comando definido: "node nome_arquivo.js"
+
 
 -- Objetos Json
 JSON.parse() // converte uma string para json-compatible
@@ -304,11 +341,13 @@ Transformação da sintaxe
 Polyfill de recursos não existentes no ambiente alvo - Preenche buracos que em versões antigas do Js não existia
 Transformação de código
 
+
 -- Instalação
 @babel/core - Núcleo do Babel, parte que faz a compilação do código
 @babel/cli - Ferramenta de linha de comando do Babel
 @babel/preset-env - Configura o babel de maneira pré definida
 npm install -D @babel/core @babel/cli @babel/preset-env - O Babel é uma dependência utilizada durante desenvolvimento
+
 
 -- Para converter
 npx babel arquivo_fonte --out-file dist.js --presets=@babel/preset.env - Para converter um arquivo
@@ -316,10 +355,12 @@ npx babel arquivo_fonte --out-dir dist.js --presets=@babel/preset.env - Para con
 
 babel.config.js - Arquivo de configuração do Babel
 
+
 ----- Webpack
 Empacotador de módulo estático
 Seu objetivo é empacotar todos os módulos de uma aplicação  apartir de um ou mais pontos de entrada em um ou mais bundles,
   que são arquivos estáticos contendo tudo o que a aplicação precisa para funcionar
+
 
 -- Peças chave do Webpack
 Entry - Entrada de onde o Webpack procurará arquivos para empacotar
@@ -327,17 +368,21 @@ Output - Saída resultante do processo de empacotamento
 Loaders - Por padrão só entende Js e Json, porém os loaders permitem ele entender outros tipos de arquivos
 Plugins - Extensões para aprimorar o comportamento do Babel
 
+
 -- Instalação
 webpack - Núcleo do Webpack parte que faz a compilação do código
 webpack-cli - Ferramenta de linha de comando do Webpack
 npm install -D webpack webpack-cli - O Babel é uma dependência utilizada durante desenvolvimento
 
+
 -- Para configurar
 webpack.config.js - Arquivo de configuração do Webpack
 Dentro dela se define as Entrys, Outputs, Loaders, Plugins
 
+
 -- Para executar
 No CMD utilize: npx webpack
+
 
 -- Loaders
 Para utilizar deve-se baixar os loaders via CMD, importar o arquivo que deseja acrescentar 
@@ -351,6 +396,7 @@ module: {
 }
 \. - serve para o compilador compreender o ponto, caso não colocasse a contrabarra ele não funcionaria
 $ - serve para indicar que o compilador deve testar se estiver no final 
+
 
 -- Plugins
 Para utilizar deve-se baixar os plugins via CMD
@@ -372,6 +418,7 @@ No caso de uso desse plugin para utilizado deve se fazer alterações no Loader 
     }]
   }
 
+
 --Webpack Dev Server
 Live server do Webpack
 npm i -D webpack-dev-server
@@ -385,23 +432,29 @@ devServer:{
   port: 8000
 },
 
+
 ----- POO
 
 POO é um paradigma de programação que é um conjunto de conceitos e recursos de linguagem que guiam a forma como programamos, e tem como peça
   central os objetos
 
+
 -- Classes 
 São como fábricas de objetos a partir de uma "fôrma"
 
+
 -- Instâncias
 Objetos fabricados pelas Classes
+
 
 -- Função construtora
 São funções que retornam um objeto, servem como a forma das classes, para chamá-la
   const nome = new Função(params)
 
+
 -- Associação
 Relacionamento entre classes que permite uma instância fazer outra realizar uma ação
+
 
 -- Encapsulamento
 Princípio de impedir que determinada parte da classe seja acessível conforme o contexto exterior. No JS existem 2 níveis:
@@ -410,19 +463,118 @@ Princípio de impedir que determinada parte da classe seja acessível conforme o
 
   Privado: onde o método ou atributo é acessível somente dentro da classe. Utiliza-se # antes do começo do atributo para definir como privado
 
+
 -- Herança 
 Recurso que permite criar classes "Filhas" ou "Subclass" que "herdam" todos os atributos e métodos de uma "Superclass" ou classe "Pai"
 
 Quando uma classe herda os atributos de outra classe e deseja acrescentar outros deve se chamar o "super" que referencia o construtor da classe
   Pai
 
+
 -- Polimorfismo
 Polimorfismo é o conceito que descreve o ato de um objeto poder assumir diferentes formas, na POO é usada na sobrescrita de métodos (uma classe
   filha pode ter sua própria implementação dos métodos da classe mãe
 )
+
 
 -- Get & Set
 São recursos que definem a forma como acessamos uma propriedade de um objeto
 
 Get: Podemos modificar a forma como uma propriedade é lida
 Set: Podemos modificar a forma como uma propriedade é alterada via atribuição
+
+
+-- Error
+Permite lançar erros para casos que são definidos pelo programador com mensagens específicas
+  const err = new Error('Essa é a mensagem');
+  trow err;
+ou diretamente
+  trow new Error('Aqui vai a mensagem');
+
+
+-- Try, catch, finally
+
+Try: Tenta executar determinado código, deve ser acompanhado de um catch
+Catch: Caso haja um error deixado pelo desenvolvedor dentro do código do Try o Catch pega esse erro e executa algum código passado
+Finally: Pode ser colocado após o Catch para executar algum código independente se houver um erro ou não
+
+
+-- Expressões Regulares
+
+São uma forma de encontrar padrões em uma string
+
+Site para ajudar com as Regular Expressions: https://regex101.com
+
+Para utilizar dentro do código é necessário usar duas barras e colocar a expressão no meio
+  Ex.: /[\sa-zA-Z]/g     Seleciona tudo que for espaço, letras maiúsculas e minúsculas
+
+As expressões regulares no JavaScript possuem flags, as flags são como os parâmetros de busca para as expressões regulares colocadas ao final de
+  uma expressão regular
+
+  Ex. de flags: 
+  g - global, seleciona todas as ocorrências dentro da String 
+  i - Insensitive, procura a ocorrência sendo case insensitive, procurando assim sendo a letra Maiúscula ou minúscula
+
+Existem também alguns caracteres especiais colocados no começo da expressão regular que indicam alguns outros parâmetros de busca
+  Ex.: 
+  ^A - Indica que a ocorrência da letra A deve ser buscada no começo da String
+  A$ - Indica que a ocorrência da letra A deve ser buscada no final da String
+  A|B - Indica que deve procurar a ocorrência da letra A ou B
+  A+ - Indica que deve ser buscada a ocorrência de vários A's sequenciados AAAAAAAAAA
+  A. - Indica que deve ser buscado a ocorrência de A seguido de alguma coisa - Ac, Ab, A2
+
+Nas expressões regulares os parênteses servem para indicar que algo deve ser executado primeiro, todavia se você deseja passar o parênteses como
+algo que deve ser buscado deve-se colocar uma contra barra antes, esta que indica um escape isso serve para qualquer caracter especial: 
+  Ex.: \( ou \)
+
+Existem também alguns casos especiais que como:
+  \w - Que retorna todos os caracteres que não são especiais ( a-z  A-Z  0-9 )
+  \W - Que retorna todos os caracteres que são especiais ( espaço - _ , . < > ; : / ? \ | + = ()  * & ¨ % $ # @ ! " ' `´ {} [] )
+  \d - Que retorna apenas dígitos
+  \D - Que retorna apenas as coisas qua não são dígitos
+  \s - Que retorna apenas a ocorrência de espaços
+  \S - Que retorna apenas a ocorrência de coisas que não são espaços
+
+Para fazer agrupamento de regras utiliza-se [] ou {}
+  Ex.: [atb] - Que procura a ocorrência das letras a t b como se tivessem sido colocadas sozinhas /a/, /t/, /b/
+  Ex.: a{1,3} - Que procura a ocorrência de a ocorrendo de 1 a 3 vezes ou seja a, aa, aaa
+
+Look ahead
+  Positive - a(?=\s) - Olha para frente dos a encontrados e retorna os que precederem o espaço indicado pelo \s
+  Negative - a(?!\s) - Olha para frente dos a encontrados e retorna os que não precederem o espaço indicado pelo \s
+
+Look behind
+  Positive - (?<=B)a - Olha para trás dos a encontrados e retorna os que forem precedidos de um B
+  Negative - (?<=B)a - Olha para trás dos a encontrados e retorna os que não forem precedidos de um B
+
+
+-- SetTimeOut 
+Serve para criar um temporizador antes de rodar determinada linha de código, 
+  Como primeiro parâmetro recebe o código que será executado após o temporizador zerar, e como segundo parâmetro recebe o tempo do temporizador
+  tempo esse que sempre deve ser passado em milissegundos
+Para parar o temporizador se usa o ClearTimeOut que recebe como parâmetro o Id do TimeOut que se obtem atribuindo a função TimeOut a uma 
+  constante ou a uma variável
+
+
+-- SetInterval
+Parecido como o SetTimeOut porém o SetInterval roda o código passado infinitas vezes a cada período de tempo, até que seja interrompida a 
+  aplicação com um ClearInterval passando o Id do SetInterval que é obtido atribuindo o SetInterval a uma constante ou a uma variável
+
+
+-- Assincronicidade 
+São códigos que são executados sem travar o fluxo da aplicação "são executados em segundo plano" como exemplo temos o SetTimeOut
+
+
+-- Promisses
+API do JavaScript que permite trabalhar com código assíncrono e depois fazer algo com a resposta desse código
+Sua chamada é feita como a de uma nova classe : new Promisse()
+
+  Possui 3 estados: 
+  - Pending - Promisse que ainda não foi resolvida
+  - Resolved - Promisse que foi executada e deu tudo certo
+  - Rejected - Promisse que foi executada e deu algo errado
+
+É possível usar a função resolve(true) para resolver a promisse ele deve ser passado como parâmetro dentro da arrow function dentro da promisse e 
+  depois chamado dentro da promisse
+
+Outro parâmetro importante é o reject(false) funciona do mesmo jeito do resolve porém rejeita a promisse
