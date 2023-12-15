@@ -565,16 +565,29 @@ Parecido como o SetTimeOut porém o SetInterval roda o código passado infinitas
 São códigos que são executados sem travar o fluxo da aplicação "são executados em segundo plano" como exemplo temos o SetTimeOut
 
 
--- Promisses
+-- Promises
 API do JavaScript que permite trabalhar com código assíncrono e depois fazer algo com a resposta desse código
-Sua chamada é feita como a de uma nova classe : new Promisse()
+Sua chamada é feita como a de uma nova classe : new Promise()
 
   Possui 3 estados: 
   - Pending - Promisse que ainda não foi resolvida
   - Resolved - Promisse que foi executada e deu tudo certo
   - Rejected - Promisse que foi executada e deu algo errado
 
-É possível usar a função resolve(true) para resolver a promisse ele deve ser passado como parâmetro dentro da arrow function dentro da promisse e 
-  depois chamado dentro da promisse
+É possível usar a função resolve(true) para resolver a promise ele deve ser passado como parâmetro dentro da arrow function dentro da promisse 
+  e depois chamado dentro da promise
 
-Outro parâmetro importante é o reject(false) funciona do mesmo jeito do resolve porém rejeita a promisse
+Outro parâmetro importante é o reject(false) funciona do mesmo jeito do resolve porém rejeita a promise
+
+
+-- Then, Catch
+Then: Ao findar a promise ele pega o resultado dela e então executa um código definido o parâmetro result passado é o resultado da promisse
+Catch: Trata a rejeição da promisse recebe a rejeição por meio de um parâmetro reason
+Finally: Sempre executa algum código após a promisse ser rejeitada ou resolvida
+
+
+===============================================================================================================================================
+===============================================================================================================================================
+Observação: As promisses, setTimeOut, Then Catch, são HignOrderFunctions portanto recebem uma função dentro delas como parâmetro
+===============================================================================================================================================
+===============================================================================================================================================
