@@ -579,6 +579,8 @@ Sua chamada é feita como a de uma nova classe : new Promise()
 
 Outro parâmetro importante é o reject(false) funciona do mesmo jeito do resolve porém rejeita a promise
 
+Promise.all - Serve para executar várias promises juntas que só funciona se todas as promises forem resolvidas
+
 
 -- Then, Catch
 Then: Ao findar a promise ele pega o resultado dela e então executa um código definido o parâmetro result passado é o resultado da promisse
@@ -591,3 +593,72 @@ Finally: Sempre executa algum código após a promisse ser rejeitada ou resolvid
 Observação: As promisses, setTimeOut, Then Catch, são HignOrderFunctions portanto recebem uma função dentro delas como parâmetro
 ===============================================================================================================================================
 ===============================================================================================================================================
+
+
+-- Funções async
+Para trabalhar com funções async basta colocar um async antes da declaração da função, ela facilita o uso de promises, caso seja passado um 
+  return dentro da função async é entendido como se fosse um resolve da promisse
+  Ex.: return a + b
+
+Para rejeitar uma promise com a função async basta retornar o método Promise.reject("Texto de rejeição")
+  Ex.: return Promise.reject("arguments us be of type number")
+
+
+-- Await
+Palavra reservada do JavaScript que trabalha junto das promises, serve para esperar a execução de uma promise
+
+Para trabalhar com erros usando o await basta usar o bloco try, catch
+
+Obs.: Só pode ser executado dentro de uma função async
+Obs.: O await para o código até executar a promise, tomar cuidado para não para o código ao executar promises grandes
+
+
+----- Requisições HTTP
+
+-- Requisições
+As requisições são divididas em partes:
+Métodos - Define o tipo de operação a ser realizada
+  GET: Obtem algo
+  POST: Envia algo
+  OPTIONS:
+  HEAD:
+
+Caminho - O caminho do recurso que será obtido
+
+Versão - A versão do protocolo HTTP 
+
+Cabeçalho - Informações adicionais entre o cliente e o servidor
+
+Corpo - Conteudo da mensagem, usado por exemplo ao enviar dados via POST
+
+
+-- Respostas
+
+Código de status - Resultados da resposta 
+  200: Sucesso
+  301: Redirecionamento
+  404: Não encontrado
+  500: Erro interno do servidor
+
+Versão - A versão do protocolo HTTP 
+
+Cabeçalho - Informações adicionais entre o cliente e o servidor
+
+Corpo - Conteudo da mensagem, usado por exemplo para enviar páginas HTML ou documentos JSON
+
+
+----- API Restfull
+
+API - Aplication Programming Interface - Muito utilizado atualmente para se referir aos serviços de Back-end
+Rest -  Representation State Transfer - Conjunto de restrições de arquitetura que visa organizar a arquitetura cliente-servidor 
+
+API Restifull - Nada mais é do que uma API que utiliza a arquitetura Rest
+
+Métodos de comunicação de API:
+
+GET: Obter informações
+POST: Enviar informações
+PUT/PATCH: Atualizar/corrigir informações
+DELETE: Excluir informações
+
+Fetch: requisição da API
