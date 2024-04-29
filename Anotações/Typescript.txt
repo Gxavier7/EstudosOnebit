@@ -1,0 +1,71 @@
+----- Sobre
+Uma linguagem de programação, considerada como um JavaScript com sintaxe para tipos, um "SuperSet" do JavaScript, como se fosse 
+    construida por cima do JavaScript. 
+
+Uma linguagem fortemente tipada indicada para projetos grandes
+
+
+----- Principais Recursos
+
+Tipagem de variáveis, objetos, parâmetros e retornos
+Criação de próprios tipo e interfaces
+Checagem de erros pela IDE
+Excelente documentação e suporte
+
+
+------ Tipos Primitivos
+
+Os tipos principais no TS são 
+
+Boolean -> let example: boolean = true     // Usado para booleanos
+Number -> let example: number = 10     // Usado para inteiros e pontos flutuantes
+String -> let example: string = "Hello"     // Usado para strings
+
+Temos também os arrays devem ser definitos com um tipo:
+
+let example: number[] = [1, 2, 3, 4]     ou     let example: Array<number> = [1, 2, 3, 4]
+
+
+----- Instalação
+
+Para instalar o typeScript basta rodar o comando do node:
+
+npm i -g typescript     -     Para instalar na máquina
+npm i --save-dev typescript     -     Para instalar no projeto somente para desenvolvimento
+
+
+----- Compilador
+
+O Typescript não é entendido pelo navegador nem pelo node, portanto faz-se necessário compilá-lo, para tal basta rodar o código:
+
+tsc arquivo.ts
+
+Esse comando gera um arquivo JavaScript ES3
+
+Para configurar o compilador do TypeScript deve-se criar na raiz do projeto um arquivo chamado tsconfig.json, também é possível criar um arquivo
+    de configuração pronto que vem com várias configurações e uma breve explicação delas usando:
+
+    tsc --init
+
+
+----- Tuplas
+Arrays específicos com tipos específicos para cada posição 
+
+
+----- Enums
+Tipo exclusivo do Typescript, não existe no JavaScript. São um conjunto de constantes nomeados
+
+
+----- Variáveis opcionais
+No TypeScript quando se vai declarar uma variável deve-se colocar o tipo, todavia existem casos em que essas variáveis podem se opcionais ou 
+    receber valor 0 ou null, para indicar em um parametro ou objeto que essa variável pode estar vazia deve-se colocar um ? na frente de sua 
+    declaração:
+        let variável?: tipo
+
+Outra maneira é definir o tipo da variável como unknown, fazendo com que ela possa receber qualquer valor
+    let variável: unknown
+
+A terceira maneira é usar o tipo any que desabilita o funcionamento padrão do TypeScript e funciona como JavaScript
+    let variável: any
+
+Tem também o tipo never que diz que a variável não deveria existir, meio que esse tipo 'Desabilita' a variável
