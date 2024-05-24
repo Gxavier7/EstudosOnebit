@@ -69,3 +69,29 @@ A terceira maneira é usar o tipo any que desabilita o funcionamento padrão do 
     let variável: any
 
 Tem também o tipo never que diz que a variável não deveria existir, meio que esse tipo 'Desabilita' a variável
+
+
+----- Criando tipos, Tipo literal
+São variáveis que possuem tipos definidos baseados nos valores que recebem, por isso tipos literais. Qualquer constante do Js é literal.
+
+
+----- Union Types
+É uma maneira de definir valores pré-definidos para variáveis literais:
+    let option: "Yes"| "No" | "Maybe"
+
+Variáveis do tipo literal não podem receber valores, mas quando definidas com o Union Types, podem receber qualquer valor que foi definido na
+    criação da variável
+    option = "Yes"
+
+O Union types também serve para definir os possíveis tipos dos métodos
+    let option: boolean | number
+
+Para dar mais uso aos nossos tipos criamos Alias
+    type Planet = "Mercúrio" | "Vênus" | "Terra" | "Marte" | "Júpiter" | "Saturno" | "Urano" | "Netuno" |  "Plutão"
+
+    let planet: Planet
+
+
+----- Interfaces
+Uma outra forma de criar tipos usada majoritariamente para objetos, facilita o desenvolvimento, todavia não é compilado para o JS
+O interfaces permite criar várias vezes o mesmo interface, o que acarreta em uma alteração do primeiro acrestando as novas propriedades
