@@ -1,0 +1,85 @@
+----- Git 
+Sistema de controle de versão de arquivos que registra as modificações de um arquivo e permite recuperar versões específicas
+
+Workdir - Diretório do projeto no seu computador
+|
+|
+add
+|
+|
+Staging - Área temporária dos arquivos
+|
+|
+commit
+|
+|
+Repository - Aponta para o ultimo commit, última versão salva do projeto
+
+
+----- GitHub
+Serviço de hospedagem para projetos Git, serve como portfólio online
+
+
+----- Alguns comandos do terminal
+
+echo - Tipo um console.log() para o texto que vier na frente do echo
+pwd - Retorna o path que você está
+ls - Lista tudo que está no diretório que você está
+mkdir - Criar pasta como o nome que vem após o comando
+cd - Se locomover entre as pastas
+touch - Cria um arquivo novo ou atualiza um arquivo ja existente ( No windows é substituido por: ni )
+echo "Hello" >>  teste.txt - Injeta o texto Hello no arquivo teste.txt
+cat - Retorna o conteúdo de determinado arquivo
+less - Exibe o conteúdo de determinado arquivo
+cp - Copia os dados de um arquivo para outro
+mv - Move um conteudo de arquivo para outro, como se fosse um comando de renomear
+rm - Comando para remover arquivo
+rm -rf - Comando para remover uma pasta com arquivos dentro
+clear - Limpa o terminal
+history - Mostra o histórico de comando usados no terminal
+!10123 - Retorna o comando do historico com o código 10123
+history | grep - Mostra o histórico filtrado de comando usados no terminal com o texto passado depois do grep
+
+
+----- Iniciando no Git
+Usando o comando dentro de uma pasta: git init
+    Cria-se uma estrutura de arquivos git para versionar seus arquivos
+
+
+----- Ciclo de vida dos arquivos
+Os arquivos possuem 2 estados:
+- Monitorado - Arquivos do último commit, podem ser:
+    - Inalterados - Arquivos que não foram alterados
+    - Modificados - Arquivos que foram modificados
+    - Selecionados - Arquivos que estão no Stage
+
+- Não Monitorado - Arquivos que não estão no último commit, novos
+
+
+----- Comando git
+
+git status OU git s - Mostra o estado dos arquivos
+git add nome_arquivo - Adiciona o arquivo para o stage
+git add . - Adiciona todos os arquivos para o stage
+git commit -m "Texto do que foi feito" - Gera uma versão salva dos arquivos em Stage
+git log - Mostra os commits que foram feitos
+git log --pretty=oneline - Mostra os commits que foram feitos de maneira mais fácil de visualizar
+git diff - Mostra a diferença dos arquivos alterados
+git diff --name-only - Mostra a diferença entre o nome dos arquivos alterados
+git commit --amend - Permite alterar a mensagem do commit
+git reset HEAD nome_arquivo - Tira o arquivo do Stage
+git checkout -- nome_arquivo - Volta o arquivo para como era no último commit
+git branch - Mostra as branchs existentes no seu projeto
+git branch nome_branch - Cria uma nova branch
+git branch -b nome_branch - Cria uma nova branch e ja muda para ela
+git checkout nome_branch - Muda para a branch com o nome passado
+git branch -D nome_branch - Deleta a branch, tem que estar fora da branch
+git merge nome_arquivo - Mistura branchs, você deve estar na branch que deve receber os arquivos e passar o nome da branch que deve ser "puxada"
+
+
+----- Branchs
+São ramos que partem da raiz master, servem para desenvolver features isoladas, para juntar várias branchs usamos o merge
+
+
+----- Merge
+Envia as mudanças de uma branch para outra, apenas a branch alvo sofrerá alteração

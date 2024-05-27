@@ -95,3 +95,31 @@ Para dar mais uso aos nossos tipos criamos Alias
 ----- Interfaces
 Uma outra forma de criar tipos usada majoritariamente para objetos, facilita o desenvolvimento, todavia não é compilado para o JS
 O interfaces permite criar várias vezes o mesmo interface, o que acarreta em uma alteração do primeiro acrestando as novas propriedades
+
+
+----- Omit e Pick
+Omit: Tipo genérico que ajuda a criar novos tipo a partir de tipos existentes, omitindo algumas propriedades específicas
+Ex.: Omit<Tipo_Generico, "propriedade" | "propriedade" | "propriedade" | "propriedade" | "propriedade" | "propriedade" >
+
+Pick: Uma outra maneira de fazer o omit mas com o Pick você escolhe as propriedades que quer receber
+Ex.: Pick<Tipo_Generico, "propriedade" | "propriedade" | "propriedade" | "propriedade" | "propriedade" | "propriedade" >
+
+
+----- Módulos
+Para exportar classes, interfaces e tipos usamos
+export interface....
+
+Para importar classes, interfaces e tipos usamos
+import { NomeDaInterface } from "./caminho do arquivo"
+
+O typescript só aceita a importação por meio do ES6, não funcionando com o Common Js
+
+
+----- Generics
+Uma forma de permitir passar argumentos para uma função ou classe que acrescentam propriedades que não pertencem aquela propriedade
+
+
+----- Decorators
+Tipo especial de declaração que podem ser anexado a uma classe método, servem para adicionar funcionalidades extras onde for inserido o 
+    Decorator
+

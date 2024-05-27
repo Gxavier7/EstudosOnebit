@@ -37,3 +37,36 @@ async function showUser(username) {
         alert(message);
     }
 }
+function showAllUsers() {
+    let message = 'Usuários:\n';
+    users.forEach(user => {
+        message += `\n- ${user.login}`;
+    });
+    alert(message);
+}
+function showReposTotal() {
+    const reposTotal = users.reduce((accumulator, user) => (accumulator + user.public_repos), 0);
+    alert(`O grupo possui um total de ${reposTotal} repositórios públicos!`);
+}
+function showTopFive() {
+    const topFive = users.slice().sort((a, b) => b.public_repos - a.public_repos).slice(0, 5);
+    let message = 'Top 5 usuários com mais repositórios públicos:\n';
+    topFive.forEach((user, index) => {
+        message += `\n${index + 1} - ${user.login}: ${user.public_repos} repositórios`;
+    });
+    alert(message);
+}
+async function main() {
+    await fetchUser('isaacpontes');
+    await fetchUser('julianaconde');
+    await fetchUser('pcaldass');
+    await fetchUser('lucasqueirogaa');
+    await fetchUser('frans203');
+    await fetchUser('LeDragoX');
+    await showUser('isaacpontes');
+    await showUser('julianaconde');
+    showAllUsers();
+    showReposTotal();
+    showTopFive();
+}
+main();
