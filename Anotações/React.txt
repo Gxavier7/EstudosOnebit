@@ -1,6 +1,15 @@
+----- React
+Biblioteca para criação de interfaces construidas a partis de pequenos blocos chamados componentes
+
+
+----- Virtual DOM 
+É uma cópia virtual do DOM onde fazemos as alteações, então o React compara o Virutal DOM com o DOM real e renderiza as partes que mudaram
+
+
 ----- Para baixar o React é possivel usar por cdn com:
 <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
 
 ----- Vite
 Biblioteca que auxilia no processo de build, ele possui:
@@ -10,6 +19,7 @@ Ele é parecido com o Webpack, todavia é o mais indicado para o React atualment
 Para criar um novo projeto com Vite basta dar:
     npm create vite@latest
 
+
 ----- Components
 São pedaços da tela que podem ser reutilizados 
 O nome de cada componente deve ser escrito em PascalCase
@@ -17,6 +27,7 @@ Para chamar um componente dentro de outro deve se escrever como se fosse uma tag
     - <NomeComponente />
 
 Para usar um componente de outro arquivo deve se usar os ESModules
+
 
 ----- Construção 
 A escrita dos componentes é feita por uma extensão do JavaScript chamada JSX, ela possui algumas características particulares
@@ -27,6 +38,7 @@ A escrita dos componentes é feita por uma extensão do JavaScript chamada JSX, 
         é uma boa prática de código usar o FRAGMENT: <Fragment><Fragment/> ou <></>
     - Para chamar uma variável, expressão ou uma função no XML utiliza-se {nome_da_variável}. Obs.: Não é possível usar blocos de código 
         como for, Switch dentro das chaves
+
 
 ----- Estilização 
 Para estilizar componentes com o React é possível usar CSS ou SASS, existem 3 formas de importar os arquivos de estilização:
@@ -52,6 +64,7 @@ Para estilizar componentes com o React é possível usar CSS ou SASS, existem 3 
         O uso de CSS Module é mais indicado para estilizações mais elaboradas
 
     Obs.: O SASS funciona da mesma forma que o css.
+
 
 ----- Props
 
@@ -85,6 +98,7 @@ function Card(title, paragraph){
     <h2> {title} <h2/>
 }
 
+
 ----- Children
 Objeto das props que são passados como filhos para os nossos componentes.
 Passando props.children na declaração do componente, tudo que for passado como filho do componente será acrescentado dentro do componente. Ex.:
@@ -100,13 +114,16 @@ function Card(props){
 
 Tudo que for passado dentro do Card será acrescentado dentro da função do componente.
 
+
 ----- Props com rest params
 Ao passar várias props na chamada do componente você pode chama-la usar o operador Spread (...), para isso deve-se colocar na declaração do 
     componente {...props}, dizendo que deve-se retornar cada prop que foi passada na chamada
 
+
 ----- Eventos no React
 Para usar Eventos no React basta chamar como um argumento os evento precedido de on. Ex.: onClick={}
     Dentro das aspas deve-se chamar a função necessária.
+
 
 ----- State
 Recurso do React que permite ter informações na tela que são renderizadas e depois atualizadas dinamicamente segundo a mudança dos valores no
@@ -125,14 +142,17 @@ Para se chamar o valor basta chamar o valor como variável:
 Para se atualizar esse valor basta chamar a função:
     useText("Following")
 
+
 ----- Hooks
 Funções especiais do React que permite se conectar ao sistema interno, ele possui algumas regras:
 1 - Só pode chamar um hook dentro de uma função de um componente React
 2 - Sempre chamar os Hooks no topo das funções
 
+
 ----- Hooks customizáveis
 Para se armazenar hooks customizáveis deve-se usar como boa prática nomes dos arquivos como useCounter, useText. Sendo esses criados como um 
     arquivo js
+
 
 ----- Prop-types
 Para executar a checagem de tipos das props e evitar erros do EsLint podemos usar os prop-types que é um pacote do React
@@ -146,4 +166,53 @@ nomeComponente.propTypes = {
 
 Deve ser colocado antes da função do componente
 
-Parei na aula 25
+
+----- Lista de dados
+Ao imprimir listas de dados com o React torna-se necessário envolve-la com alguma tag para que possa ser retornado na tela e para cada elemento
+é necessário também colocar uma key para separa-los e facilitar o entendimento do React
+
+
+----- UseRef
+Recurso do React que permite salvar dados em uma variável, porém no React se os dados são salvos em uma variável comum, quando a página é 
+    renderizada novamente essa variável perde seu valor e retorna para o valor inicial, todavia o useRef mantém esse valor
+
+O useRef é comumente utilizado para manipular os objetos do DOM uma vez que não é necessário ficar buscando toda vez o elemento e também, todos
+os componentes React possuem um atributo chamado ref que recebe o valor do useRef referenciado
+
+
+----- UseEffect
+Recurso do React permite sincronizar nossas aplicações com sistemas externos através de efeitos colaterais, que são funções que são executadas
+    quando uma dependência for alterada.
+Importante sempre lembrar de colocar o array de dependências ou a função será chamada toda vez que for re-renderizado o componente
+
+
+----- UseContext
+Cria um contexto que permite o acesso de seus dados para qualquer componente filho dentro do Context.Provider
+Para usar essa API é necessário um componente pai comum a todos os Filhos
+
+
+----- SPA (Single Page Applications)
+São aplicações de apenas uma página, sem recarregar o navegador, no lugar de páginas temos rotas funcionam como as telas de um app nativo, 
+    rotas são telas específicas associadas a um caminho de url
+
+Funcionam de forma dinãmica usando JS para gerenciar todo o conteúdo da página, com o objetivo de fornecer a experiência de um aplicativo
+
+Vantagens
+- Fluidex de um aplicativo nativo
+- Melhor experiência após o carregamento inicial
+
+Desvantagens
+- Carregamento inicial mais lento
+- Problemas de SEO
+
+
+----- React Router DOM
+Biblioteca feita para permitir o React trabalhar com rotas de SPA's
+Temos rotas normais que apenas alteram o layout da página e Rotas dinâmicas, são rotas que possuem apenas um layout, mas carregam dados
+    diferentes de acordo com parâmetros informados na URL
+
+- Loader: Função que carrega os dados necessários para uma rota específica
+
+
+----- Data Fetching e Erros
+Nossas páginas devem ser bem protegidas contra erros para tanto precisamos no react criar tratativas par isso

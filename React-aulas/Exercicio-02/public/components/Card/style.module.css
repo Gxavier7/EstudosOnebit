@@ -1,0 +1,36 @@
+.cardContainer{
+    gap: 4rem;
+    margin: 2rem;
+    width: 69rem;
+    display: flex;
+    padding: 3rem;
+    align-items: start;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #d7e1e7;
+}
+
+.cardImage{
+    height: 25rem;
+}
+
+.textContent{
+    gap: 4rem;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 600; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.textAbout{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

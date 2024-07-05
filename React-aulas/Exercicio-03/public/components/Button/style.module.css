@@ -1,0 +1,13 @@
+.button {
+    border: none;
+    padding: .5rem;
+    width: 6rem;
+    border-radius: 5px;
+    background-image: linear-gradient( 45deg, #1e70bd, #70c7e5);
+}
+
+.text{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
