@@ -1,0 +1,62 @@
+----- Next.Js
+Um Framework do React para Produção
+
+Os Next traz alguns componentes prontos para utilização:
+    - Link: Componente de navegação que ja traz pronta toda a navegação do lado do cliente
+    - Image: Permite inserir imagens na aplicação, porém o benefício é que a imagem ja vem carregada para todos os tipos de resolução e evita o
+        carrregamento quebrado da página
+    - Script: Permite inserir Scripts de terceiros na sua aplicação e permite definir quando o Script será carregado
+    - Head: Componente que permite inserir coisas no HEAD da página de qualquer lugar que estiver
+
+O Next traz um sistema de rotas pronto para se utilizar:
+    - O Next traz rotas gerenciadas via Sistema de Arquivos
+    - O next também facilita o trabalho com rotas dinâmicas colocando colchetes no nome do arquivo
+    - Possui também um hook useRouter() e um objeto router com os dadosdo roteamento
+
+O Next permite criar uma API dentro do próprio Framework para o seu projeto, permitindo ter um backend para o seu Front-end dentro do seu 
+    próprio projeto
+
+O Next possui alguns recursos de renderização:
+    - Lado do Cliente: Renderização padrão do React, depois que a página carrega todos os componentes são carregados
+    - Lado do Servidor: O Next tem um problema com o carregamento das páginas e os motores de busca do Google, e para resolver esse problema
+        foi implementado a Renderização pelo lado do servidor que resolve esse problema
+    - Geração de Sites Estáticos: O Next quando pré-definido permite a criação de páginas estáticas como respostas para as requisições, o que
+        resolve o problema do lado do cliente citado acima e ajuda com a segurança de dados uma vez que não tem código nenhum rodando do lado do 
+        servidor
+    - Incremental Static Regeneration: Funcionalidade que permite atualizar páginas estáticas sem a necessidade de fazer o Build novamente
+
+----- Estrutura de um projeto Next
+
+Para criar um projeto com Next basta rodar o comandono terminal: npx create-next-app nomeDoApp --typescript (apenas se quiser rodar typescript)
+
+O Projeto vem com uma estrutura similar a do react, com pasta node_modules, package.json, caso seja criado com o Typescript vem com o 
+    tsconfig.json, um next.config.js, vem o yarn.lock e com um README.md. Além de uma pasta de paginas, uma pasta pública, e uma de estilos
+
+Quando se cria um projeto com Next ele ja vem com uma página de boas vindas
+
+----- Deploy 
+
+A própria empresa Vercel que criou o Next já tem um serviço de hospedagem próprio para esse framework
+
+Para fazer deploy da sua aplicação basta entrar no site da Vercel e importar o seu projeto do GitHub para o serviço de hospedagem
+
+ 
+----- SSR (Server Side Rendering)
+
+Uma renderização que é feita do lado do servidor ao invés de no cliente, vide page dynamic projeto start
+
+Essa renderização tem vários benefícios, dentre eles:
+- Carregamento mais rápido
+- Os dados são acrescentados no HTML da página, fazendo com que apareça mais rapido no cliente e ajuda a página com questão aos motores 
+    de busca do Google
+
+----- SSG (Static Side Generation)
+
+As páginas criadas estaticamente são páginas que são carregados ao fazer o build da página, diferente das dinamicas que são ao carregar a página,
+    no ambiente de desenvolvimento, elas se alteram mas em produção não.
+O problema das páginas estáticas é que elas só podem ser carregadas quando é feito o build, se você recarregar a página não vai alterar, para
+    contornar isso podemos utilizar o ISR (Implemental Static Regeneration) que atualiza com certa frequencia os dados que são gerados 
+    estaticamente sem precisar fazer o build
+
+    Para isso basta colocar um revalidate que recebe um tempo em segundos na função de getStaticProps vide page static projeto start
+

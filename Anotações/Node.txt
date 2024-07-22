@@ -1,0 +1,32 @@
+----- Node.Js
+
+O Node.Js é um ambiente de execução de código JavaScript fora do navegador, que permite execução do lado do servidor.
+É um projeto open-source e possui uma comunidade ativa que contribui com pacotes e soluções
+Inclui o NPM, que é o gerenciador de pacotes de Node.Js
+
+----- Event Loop
+
+Conceito fundamental no Node.Js que permite o Js ser executado de forma não bloqueante e eficiente. Um computador usa thread (unidade básica
+    para qual um SO aloca tempo do processador) para separar tempo para os processos, estes que são executados um após o outro em cada Thread,
+    o Node permite que esses processos sejam executados em paralelo, ou seja, vários ao mesmo tempo.
+O funcionamento básico do event loop consiste no gerenciamento e execução de tarefas assíncronas em Js, permitindo a execução de várias 
+    operações sem bloquear a Thread principal, opera em um loop infinito verificando e executando todas as tarefas da fila de eventos
+
+----- Execução de código Js no terminal 
+
+Para executar código Js no terminal basta navegar até a pasta do arquivo e rodar:
+    node nomeDoArquivo
+
+Para testar algum código mais rápido no terminal o node tem uma espécie de console como o do terminal que usa o REPL (read-eval-print-loop), 
+    para ter acesso a ele basta digitar "node" no terminal, para sair basta digitar ".exit" ou apertar Ctrl+D
+
+----- CommonJS
+
+Forma de importar módulos fora dos navegadores
+Não é suportado por padrão pelos navegadores, porém usando o Node.Js funciona normalmente
+
+Para exportar um módulo
+  module.exports = nome
+
+Para importar um módulo
+  Const nome = require("./nome")
