@@ -30,3 +30,122 @@ Para exportar um módulo
 
 Para importar um módulo
   Const nome = require("./nome")
+
+O Node atualmente já tem suporte para os Es Modules (Forma de importar dos navegadores) mas para fazer esse import temos que definir no arquivo
+  package.json o tipo de importação, acrescentando:
+    "type": "module",
+  Por convenção para dividir os arquivos entre esses dois meios de importar, utiliza-se a extensão
+  .cjs - Para o CommonJS
+  .mjs - Para os Es Modules
+
+
+----- Trabalhando com arquivos com Node
+
+Para mexer com arquivos com o Node precisamos do módulo nativo do Node de File Sistem, para isso importamos:
+  const fs = require("node:fs");
+
+É interessante colocar os comando entre um bloco Try.. catch.. para tratativas em caso de erros
+
+Para criar o arquivo usamos a função sincrona
+  fs.writeFileSync("Caminho do arquivo", "Conteúdo", "Formatação tipo UTF-8 ou ascii...")
+  Caso esse comando seja rodado após fazer alterações no arquivo ele irá sobreescrever todo o arquivo pelo q estiver no conteúdo
+Ou a função assincrona:
+  fs.writeFile("Caminho do arquivo", "Conteúdo", "Formatação tipo UTF-8 ou ascii...", funçãoCallbackParaTratarErros)
+
+Para leitura de arquivos usamos a função sincrona
+  fs.readFileSync("Caminho do arquivo", "Formatação tipo UTF-8 ou ascii...")
+  Os dados retornados dessa função podem ser salvos em uma variável
+Ou a função assincrona:
+  fs.readFile("Caminho do arquivo", "Formatação tipo UTF-8 ou ascii...", funçãoDeCallBack)
+
+Para verificar se o arquivo existe temos a função
+  fs.existsSync("arquivo.txt")
+  Que retorna um booleano com true para caso o arquivo exista
+
+Para renomear arquivos usamos a função 
+  fs.rename("nomeAntigoDoArquivo", "NovoNomeDoArquivo", funçãoCallBackParaErros)
+
+Para excluir arquivos usamos a função 
+  fs.unlink("caminhoDoArquivo", funçãoCallBackParaErros)
+
+
+----- Trabalhando com Paths no Node
+
+Para trabalhar com Paths pelo Node precisamos importar o módulo do Node
+  const path = require("node:path")
+
+Afim de evitarmos erros de formatação ao mudarmos de SO usamos o path.join para gerar os path completos. Ex.:
+
+  path.join("nomePasta", "nomePasta", "nomePasta"...)
+
+O Node possui algumas variáveis globais com funções especiais como:
+  __dirname - retorna o caminho do diretório atual
+  __filename - retorna o caminho do arquivo atual
+
+Para juntar paths resolvendo alguma string usamos o 
+  path.join(string, string, string...)
+Vide Node-aulas/paths
+
+Para retornar a última parte de um path usamos o baseName
+  path.basename(string)
+
+Para retornar a extensão do path usamos o extname
+  path.extname(string)
+
+
+----- Trabalhando com informações do SO
+
+Para trabalhar com informações do SO precisamos de importar os módulo Operation Sistem do Node
+  const os = require("node:os")
+
+os.platform - Retorna o sistema operacional que está sendo usado. win32 / mac ...
+os.arch - Retorna a arquitetura do Sistema Operacional. x64 / x32 ...
+os.cpus - Retorna informações de cada núcleo do processador, se usado como length retorna a quantidade de núcleos
+os.totalmem - Retorna o total de memória RAM
+os.freemem - Retorna o total de memória RAM livre
+
+
+----- Streams e Buffers
+
+  - Streams: São um fluxo contínuo de dados, como um rio de informação que podem ser lidos ou escritos de forma incremental
+      - Usado para lidar com dados em pequenos Chunks (pedaços), o que torna o processo mais eficiente
+      - Ideal para otimizar operações em grandes volumes de dados e para processar fluxos contínuos
+      - Como um vídeo no youtube, ele não carrega completamente mas carrega por pedaços
+      - Existem vários tipos de Streams:
+        - Readable Stream: Stream de leitura
+        - Writeable Stream: Stream de escrita
+        - Duplex Stream: Stream de leitura e escrita
+        - Transform Stream: Stream de transformação
+
+  - Buffers: Áreas temporais de armazenamento de dados, especialmente úteis quando trabalhamos com streams
+      - Áreas temporarias geralmente na RAM para armazenar dados binários
+      - Úteis para representar dados binários brutos armazenando uma sequência de número inteiros
+      - Possuem um tamanho fixo, ou seja, não é possível altera-lo após cria-lo
+
+
+----- Interações com terminal 
+
+Para interagir com o terminal através do node usamos a variável process que se refere ao processo que está rodando durante a execução do código
+Para tal usamos 
+  - process.stdout.write("Olá Mundo!")      -  Escreve dados no console
+  - process.stdin.on("data", (data) => {})  -  Recebe dados de entrada
+
+Com o node podemos criar também uma interface de leitura de linhas, para usá-lo devemos importar o módulo 
+  const readline = require("node:readline")
+ 
+  A partir deste módulo criamos a interface
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+
+  Dentro do interface temos diversos métodos de interação com o terminal, dentre eles:
+  - rl.write: Para escrever no terminal
+  - rl.question: Para fazer uma pergunta
+  - rl.close: Para encerar o programa
+  - process.exit(0): Para parar o programa o 0 encerra normal e o 1 encerra com erro
+
+
+----- Argumentos de linha de comando
+
+Para trabalharmos com argumentos nas linhas de comando devemos usar o process.argv que retorna os argumentos passados na chamada da execução Ex.::
+Comando:  node index.js 42
+Retorno:  Caminho_da_pasta_node     Caminho_do_arquivo_index.js      String_42
+
