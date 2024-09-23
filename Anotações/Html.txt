@@ -21,6 +21,9 @@ Table > tr > th - Nome das colunas
 Table > tr > td - Valor da linha
 
 ----- Tabela
+Para trabalhar com formulários existe uma propriedade chamada enctype define a forma como o conteudo do formulário
+  será tratado pelo navegador
+
 Form - Campos para receber entrada de dados
 Form action="" - Para onde o dado submetido será enviado
 Form - Campos para receber entrada de dados

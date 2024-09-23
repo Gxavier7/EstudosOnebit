@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/output.css" rel="stylesheet">
+  <title>Listas</title>
+</head>
+<body class="bg-gray-800">
+  <%- include('partials/header') %>
+
+  <div class="container p-20 h-fit w-screen bg-gray-800">
+    <div class="flex justify-between items-center gap-x-6 py-5">
+      <h1 class="text-white font-medium text-4xl">Listas de Tarefas</h1>
+      <div>
+        <a href="/taskList/create" class="bg-blue-800 rounded-md p-2 text-white" >Nova Lista</a>
+      </div>
+    </div>
+    <ul role="list" class="divide-y divide-gray-600">
+      <% tasksList.forEach( task => {%>
+        <li class="flex justify-between items-center gap-x-6 py-5">
+          <div class="flex gap-x-4">
+            <a href="/taskList/<%= task.id %>" class="text-xl cursor-pointer font-semibold leading-6 text-white"><%= task.title %></a>
+          </div>
+          <form id="delete-form" action="/taskList/delete/<%= task.id %>" method="post">
+            <button type="submit" class="bg-red-800 rounded-md p-2 text-white">Delete</button>
+          </form>
+          
+        </li>    
+      <% }) %>  
+    </ul>
+  </div>
+</body>
+</html

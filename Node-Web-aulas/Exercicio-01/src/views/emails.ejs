@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Edições</title>
+    <link rel="stylesheet" href="/lista.css">
+</head>
+<body>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/lista">Lista</a>
+      </nav>
+    </header>
+    <div class="container">
+        <h1>Lista de Edições</h1>
+        <ul class="item-list">
+          <% mail.forEach( e => { %>
+            <li> 
+              <span>
+                <%= e.mail %> 
+              </span>
+              <span>
+                <form action="/lista/delete" method="post">
+                  <input type="hidden" name="mail" value="<%= e.mail %>">
+                  <button type="submit">Excluir</button>
+                </form>
+              </span>
+            </li>
+          <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

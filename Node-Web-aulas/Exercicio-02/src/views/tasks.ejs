@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/output.css" rel="stylesheet">
+  <script>
+      function submitForm(variavel) {
+          document.getElementById(variavel).submit();
+      }
+  </script>
+  <title>Listas</title>
+</head>
+<body class="bg-gray-800">
+  <%- include('partials/header') %>
+
+  <div class="container p-20 h-fit w-screen bg-gray-800">
+    <div class="flex justify-between items-center gap-x-6 py-5">
+      <h1 class="text-white font-medium text-4xl"><%= taskList.title %></h1>
+    </div>
+    
+    <form class="flex items-center gap-x-6 py-5 w-full" action="/taskList/<%= taskList.id %>/create" method="post">
+      <label class="relative block" for="title">
+        <span class="sr-only">Search</span>
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+          <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><!-- ... --></svg>
+        </span>
+        <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-96 border border-slate-300 rounded-md py-2 pl-4 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Insira o nome da tarefa" type="text" id="title" name="title"/>
+      </label>
+
+      <button type="submit" class="bg-blue-800 rounded-md p-2 text-white px-3">Criar</button>
+    </form>
+
+    <ul role="list" class="divide-y divide-gray-100">
+      <% taskList.tasks.forEach((task) => { %>
+        <li class="flex justify-between gap-x-6 py-5">
+          <div class="flex justify-center items-center text-white font-bold ">
+            <form action="/taskList/<%= taskList.id %>/complete/<%= task.id %>" id="<%= task.id %>" method="post" class="flex justify-center items-center gap-2" >
+              <input type="checkbox" name="<%= task.id %>" id="<%= task.id %>" onclick="submitForm( `<%= task.id %>` )" class="appearance-none h-4 w-4 border-2 border-gray-400 rounded-sm transition-colors duration-300 checked:bg-green-500 checked:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50" <%= task.complete ? "checked" : "" %>  />
+              <label for="<%= task.id %>"><%= task.title %></label>
+            </form>
+          </div>
+          
+          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+            <form id="delete-form" action="/taskList/<%= taskList.id %>/delete/<%= task.id %>" method="post">
+              <button type="submit" class="bg-red-800 rounded-md p-2 text-white">Delete</button>
+            </form>
+          </div>
+        </li>
+      <% }) %>  
+    </ul>
+  </div>
+</body>
+</html

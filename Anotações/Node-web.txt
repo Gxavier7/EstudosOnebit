@@ -1,2 +1,111 @@
 ----- Node.Js na Web
 
+Para trabalhar com o Node na Web, precisamos de criar um servidor, para isso usamos a módulo HTTP:
+const http = require("node:http")
+
+Essa biblioteca nos proporciona ferramentas para criar, configurar e gerenciar o um servidor HTTP, alguns dos métodos principais são:
+  createServer = Uma High-Order-Function que recebe uma função com 2 paramêtros, dentre eles ( request, response ) que dentro da função são
+    usados para configurar as ações dos Métodos de chamada desse servidor
+
+
+----- Express
+
+Um micro-framework usado apenas para desenvolvimento do servidor Web de maneira mais ágil e fácil, vide Node-Web-aulas/express/src/server.js
+
+
+----- EJS
+
+Uma linguagem de template que permite gerar arquivos HTML com códigos JS imbutidos
+
+
+----- Aplicações Monolíticas
+Na programação Web, um monólito é uma aplicação que engloba todos os serviços em um único software ( desde o back até o front)
+
+
+----- MVC 
+É um padrão de projeto que ajuda na organização de um software que dita como estruturar pastas, classes e funções no projeto além do fluxo de 
+  funcionamento da aplicação
+
+Esse padrão de projeto é dividido em 3 camadas: 
+  - Model: Camada responsável pela montagem das entidades e pela leitura e persistencia na base de dados
+  - View: Camada responsável pela interface da aplicação e pelo que será devolvido para o usuário com relação a front-end
+  - Controller: Camada responsável por receber as requisições e processá-las, como se fosse o gerente que decide para onde vão as coisas
+
+
+----- Ferramentas para teste de rotas
+Postman
+Insomnia
+ThunderClient
+
+
+----- ApiRest
+Rest - Representational State Transfer
+
+Permitem tranferir estados no backend para um front-end, permitindo:
+
+Leitura
+Criação
+Atualização 
+Exclusão
+
+Para receber dados com a API rest é necessário definir o metodo do express que consegue ler JSON para que ele consiga interpretar requisições
+app.use(express.JSON())
+
+
+----- Middlewares
+São funções que tem acesso ao objeto da requisição, da resposta e à próxima função no ciclo do req, res
+Utilizados para modificar objetos de requisição ou de resposta, encerrar o ciclo de requisição/repsosta ou chama o próximo middleware na pilha.
+
+São executados sequencialmente, cada um faz o que precisa com a requisição e então chama o próximo, e o último deve finalizar, devolvendo uma
+resposta.
+
+Existem 3 tipos de Middlewares
+ - Aplicação: Registrados para atuar em todas as requisições
+ - Roteador: Registrados para atuar em requisições com caminhos ou padrões de caminhos específicos
+ - Tratamento de erro:
+
+
+----- Autenticação e Autorização
+Autenticação: Um mecanismo para garantir que um usuário é quem ele diz que é, usado para separar conteúdos da aplicação para users e visitantes
+
+Existem alguns tipos de autenticação, as mais comuns são:
+ - Credenciais únicas ( e-mail, senha )
+ - Autenticação de Múltiplos Fatores ( MFA )
+ - Single Sign-On (SSO)
+ - Autenticação sem senha ( passwordless )
+
+Para fazer autenticações são necessários protocolos e estratégias de autenticação, como:
+ - Baseada em sessões 
+ - Oauth
+ - JWT ( Json Web Token )
+
+
+Autorização: Garante que partes específicas de uma aplicação sejam ou não acessados por determinados usuários, com privilégios e permissões
+
+Existem alguns tipos de autorização, as mais comuns são:
+ - Controle de Acesso Baseado em Atributos - Permissões baseadas em cargo ou departamento 
+ - Controle de Acesso Baseado em Papéis - Permissões baseadas em papéis ou atributos como Admin, Editor, User
+ - Listas de Controle de Acesso - Listas que especificam quais usuários tem permissão para acessar determinados recursos
+
+
+----- Express-session 
+Uma extensão do express para lidar com seções
+
+
+----- JWT
+Tecnologia para criar tokens para autenticação
+
+
+----- UUID 
+Biblioteca para geração de Id's únicos
+
+
+----- Dotenv
+Biblioteca para utilização de variáveis de ambiente com o .env
+
+
+----- Bcrypt
+Biblioteca para criptografar senhas
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------

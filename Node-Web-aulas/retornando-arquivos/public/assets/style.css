@@ -1,0 +1,14 @@
+body { 
+  background-color: #321451;
+  color: #f3f3f3;
+  font-family: sans-serif;
+  text-align: center;
+  display: grid;
+  place-content: center;
+}
+
+button {
+  cursor: pointer;
+  font-style: 1rem;
+  padding: 1rem;
+}
