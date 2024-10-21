@@ -1,0 +1,34 @@
+----- Banco de Dados
+São um conjunto de arquivos relacionados entre si que armazenam todo tipo de dados
+Eram gerenciados pelos próprios SO's até surgirem os SGBD's ( software encarregado de cuidar do acesso, persistência, manipulação e organização 
+  de dados)
+
+Os SGBD são divididos em duas categorias
+  - Relacionais: Bancos tradicionais que trabalham com SQL
+  - Não relacionais: Bancos que não utilizam o SQL
+
+
+----- Conceitos fundamentais Banco de Dados
+- Tabelas: Forma estruturada de armazenar os dados
+- Relacionamentos: Forma de vincular uma tabela e outra para criar estruturas mais robustas
+- Colunas: Definem quais dados podem ser inseridos em uma tabela
+- Linhas: Os registros de dados em si
+- Primary Key: Coluna de uma tabela que é única e serve para identificar cada linha da tabela
+- Constrains: Limitações e regras impostas sobre o Banco de Dados
+
+
+----- SQL
+Linguagem padrão utilizada para gerenciar e manipular Banco de Dados Relacionais, usado para criação de tabelas, linhas, consultas, etc..
+Os comandos do SQL tem diversas categorias, como:
+- DDL: Data Definition Language - Comando para definir a estrutura do Banco de Dados - CREATE TABLE, DROP TABLE...
+- DML: Data Manipulation Language - Comando para manipular os dados do Banco de Dados - SELECT, INSERT, UPDATE...
+- DCL: Data Control Language - Comandos para controlar o acesso aos dados - GRANT, REVOKE
+- TCL: Transaction Control Language - Comandos para gerenciar transações - BEGIN, COMMIT, ROLLBACK
+
+
+----- Backup
+pg_dump - faz o backup dos dados
+pg_restore - restaura os dados
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------

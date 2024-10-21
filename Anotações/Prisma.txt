@@ -1,0 +1,6 @@
+----- Driver Básico 
+Para o postgress a ferramenta mais básica que se tem é a biblioteca PG do Node
+
+
+----- Pool de conexões
+Uma pool de conexões é uma maneira de evitar o constante abrir e fechar de conexões à base de dados, mantendo algumas das conexões sempre abertas
