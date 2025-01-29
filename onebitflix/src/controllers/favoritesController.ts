@@ -10,21 +10,15 @@ export const favoritesController = {
 
     try {
       const favoriteWithCourseid = await favoriteService.findByCourseId(courseId)
-      
-      console.log(favoriteWithCourseid);
 
       if (favoriteWithCourseid.length !== 0) {
         throw new Error(`This course is already a favorite`)
       }
-      
-      if (typeof userId === `number` || typeof userId === `string`) {
 
-        const favorite = await favoriteService.create(userId, Number(courseId))
-  
-        return res.status(201).json(favorite)
-      } else {
-        throw new Error (`User Id must be of type number`)
-      }
+      const favorite = await favoriteService.create(Number(userId), Number(courseId))
+
+      return res.status(201).json(favorite)
+
     } catch (err) {
       if (err instanceof Error) {
         return res.status(400).json({ message: err.message })
@@ -40,6 +34,22 @@ export const favoritesController = {
       const favorites = await favoriteService.findByUserId(userId)
 
       return res.json(favorites)
+    } catch (err) {
+      if (err instanceof Error) {
+        return res.status(400).json({ message: err.message })
+      }
+    }
+  },
+
+  // DELETE /favorites/:Id
+  delete: async ( req: AuthenticatedRequest, res: Response ) => {
+    const userId = req.user!.id
+    const courseId = req.params.id
+
+    try {
+      await favoriteService.delete(userId, Number(courseId))
+
+      return res.status(204).send()
     } catch (err) {
       if (err instanceof Error) {
         return res.status(400).json({ message: err.message })
