@@ -9,12 +9,6 @@ export const favoritesController = {
     const { courseId } = req.body
 
     try {
-      const favoriteWithCourseid = await favoriteService.findByCourseId(courseId)
-
-      if (favoriteWithCourseid.length !== 0) {
-        throw new Error(`This course is already a favorite`)
-      }
-
       const favorite = await favoriteService.create(Number(userId), Number(courseId))
 
       return res.status(201).json(favorite)
