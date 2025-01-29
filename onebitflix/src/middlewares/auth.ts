@@ -13,21 +13,41 @@ export function ensureAuth(req: AuthenticatedRequest, res: Response, next: NextF
 
   
   if (!authorizationHeader) {
-    return res.status(401).json({ message: 'Não autorizado: nenhum token encontrado' })
+    return res.status(401).json({ message: `Unauthorized, no token found` })
   }
   
   const token = authorizationHeader.replace(/Bearer /, '')
   
-  jwtService.verifyToken(token, (err, decoded) => {
-    console.log(decoded)
+  jwtService.verifyToken(token, async (err, decoded) => {
 
     if (err || typeof decoded === 'undefined') {
-      return res.status(401).json({ message: 'Não autorizado: token inválido' })
+      return res.status(401).json({  message: `Unauthorized, invalid token` })
     }
 
-    userService.findByEmail((decoded as JwtPayload).email).then(user => {
-      req.user = user
-      next()
-    })
+    const user = await userService.findByEmail((decoded as JwtPayload).email)
+    req.user = user 
+    next()
+  })
+}
+
+export function ensureQueryAuth (req: AuthenticatedRequest, res: Response, next: NextFunction) {
+  const { token } = req.query
+
+  if (!token) return res.status(401).json({ 
+    message: `Unauthorized, no token found` 
+  })
+
+  if ( typeof token !== `string` ) return res.status(401).json({ 
+    message: `Parameter token must be of type string` 
+  })
+
+  jwtService.verifyToken(token, async (err, decoded) => {
+    if (err || typeof decoded === 'undefined') {
+      return res.status(401).json({  message: `Unauthorized, invalid token` })
+    }
+
+    const user = await userService.findByEmail((decoded as JwtPayload).email)
+    req.user = user 
+    next()
   })
 }
