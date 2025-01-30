@@ -1,6 +1,9 @@
 import { Request, Response } from "express";
 import { courseService } from "../services/coursesService";
 import { getPaginationParams } from "../helpers/getPaginationParams";
+import { likeService } from "../services/likeService";
+import { AuthenticatedRequest } from "../middlewares/auth";
+import { favoriteService } from "../services/favoriteService";
 
 export const coursesController = {
   // GET /courses/featured
@@ -21,9 +24,22 @@ export const coursesController = {
   // GET /courses/newest
   newest: async (req: Request, res: Response) => {
     try {
-      const newestCourses = await courseService.getTopTenNwest()
+      const newestCourses = await courseService.getTopTenNewest()
 
-      res.json(newestCourses)
+      return res.json(newestCourses)
+    } catch (err) {
+      if (err instanceof Error) {
+        return res.status(400).json({ message: err.message })
+      }
+    }
+  },
+
+  // GET /courses/popular
+  popular: async (req: Request, res: Response) => {
+    try {
+      const topTen = await courseService.getTopTenByLikes()
+
+      return res.json(topTen)
     } catch (err) {
       if (err instanceof Error) {
         return res.status(400).json({ message: err.message })
@@ -41,7 +57,7 @@ export const coursesController = {
 
       const courses = await courseService.findByName(name, page, perPage)
 
-      res.json(courses)
+      return res.json(courses)
 
     } catch (err) {
       if (err instanceof Error) {
@@ -51,13 +67,22 @@ export const coursesController = {
   },
 
   // GET /courses/:id
-  show: async (req: Request, res: Response) => {
-    const { id } = req.params
+  show: async (req: AuthenticatedRequest, res: Response) => {
+    const userId = req.user!.id
+    const courseId = req.params.id
 
     try {
-      const course = await courseService.findByIdWithEpisodes(id)
+      const course = await courseService.findByIdWithEpisodes(courseId)
 
-      res.json(course)
+      if (!course) {
+        return res.status(404).json({message: `Course not found`})
+      }
+
+      const isLiked = await likeService.isLiked(userId, Number(courseId))
+      const isFavorited = await favoriteService.isFavorited(userId, Number(courseId))
+      
+      return res.json({...course.get(), isLiked, isFavorited})
+      
     } catch (err) {
       if (err instanceof Error) {
         return res.status(400).json({ message: err.message })
