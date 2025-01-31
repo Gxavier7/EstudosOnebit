@@ -27,6 +27,7 @@ export const favoriteService = {
 
     return {
       userId,
+      //@ts-ignore
       courses: (await favorites).map(favorite => favorite.Course)
     }
   },

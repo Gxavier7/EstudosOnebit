@@ -61,7 +61,10 @@ export const episodeService = {
       }
     })
 
-    if ( watchTimeAlreadyExists ) {
+    console.log(watchTimeAlreadyExists);
+    
+
+    if ( watchTimeAlreadyExists !== null) {
       watchTimeAlreadyExists.seconds = seconds
 
       await watchTimeAlreadyExists.save()
